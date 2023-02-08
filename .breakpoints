@@ -1,0 +1,30 @@
+{
+  "files": {
+    "plugins/marker-ephoto360.js": [
+      {
+        "id": "78a81fff-106f-4007-b796-d55e327a0b61",
+        "line": 22,
+        "version": 1,
+        "index": 837
+      },
+      {
+        "id": "7cb1d992-2bf3-4e4e-b696-23604d4bd61e",
+        "line": 24,
+        "version": 1,
+        "index": 887
+      },
+      {
+        "id": "e84d006c-8b11-44b0-9c92-884d1ddd47f8",
+        "line": 25,
+        "version": 1,
+        "index": 1108
+      },
+      {
+        "id": "b77decd3-df20-4809-8b81-0bef4a3163e1",
+        "line": 26,
+        "version": 1,
+        "index": 1208
+      }
+    ]
+  }
+}
