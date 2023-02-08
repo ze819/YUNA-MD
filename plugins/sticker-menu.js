@@ -69,39 +69,31 @@ let fsizedoc = '1'.repeat(10)
 let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: wm, body: '👋 ' + username, mediaUrl: ig, description: 'Hola', previewType: 'PHOTO', thumbnail: await(await fetch(gataMenu.getRandom())).buffer(), sourceUrl: redesMenu.getRandom() }}}
 
 let menuA = `🧸 ${lenguajeGB['smsConfi2']()} *${username}*`.trim()
-let menuB = `╭┄〔 *${wm}* 〕┄⊱
-┊დ *${week}, ${date}*
-┊დ *${lenguajeGB['smsBotonM4']()} » ${Object.keys(global.db.data.users).length}* 
-┊
-┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
-┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
-┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
+let menuB = ` *تزكر قبل كل أمر يجب أن تستخدم ${usedPrefix}*
 
-⠇ ${lenguajeGB['smsTex22']()} 🎐
-∘ _${usedPrefix}sticker | s *imagen o video*_
-∘ _${usedPrefix}sticker | s *url de tipo jpg*_
-∘ _${usedPrefix}emojimix *😺+😆*_
-∘ _${usedPrefix}scircle | círculo *imagen*_
-∘ _${usedPrefix}semoji | emoji *tipo emoji*_
-∘ _${usedPrefix}attp *texto*_
-∘ _${usedPrefix}attp2 *texto*_
-∘ _${usedPrefix}ttp *texto*_
-∘ _${usedPrefix}ttp2 *texto*_
-∘ _${usedPrefix}ttp3 *texto*_
-∘ _${usedPrefix}ttp4 *texto*_
-∘ _${usedPrefix}ttp5 *texto*_
-∘ _${usedPrefix}ttp6 *texto*_
-∘ _${usedPrefix}palmaditas | pat *@tag*_
-∘ _${usedPrefix}bofetada | slap *@tag*_
-∘ _${usedPrefix}besar | kiss *@tag*_
-∘ _${usedPrefix}alimentar | food *@tag*_
-∘ _${usedPrefix}dado_
-∘ _${usedPrefix}wm *packname|author*_
-∘ _${usedPrefix}wm *texto1|texto2*_
-∘ _${usedPrefix}stickermarker *efecto : responder a imagen*_
-∘ _${usedPrefix}stickerfilter *efecto : responder a imagen*_
-∘ _${usedPrefix}cs *:* cs2_
+*┇* ${lenguajeGB['smsTex22']()} 🧸
+*┇⊛ هذا الأمر يصنع لك ملصقات*
+*┇اكتب : s او ملصق*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يدمج لك الايموجي (الرموز التعبيرية)*
+*┇اكتب : ايموجي او emojimix*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر بقوم بتحويل الكلام إلى ملصق (يعمل فقط على الغه الاجنبيه)*
+*┇اكتب : attp - attp2 - attp3 - attp4 - attp5 - attp6 مع جمله*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر برسل ملصق عشوائي للانمي يقوم بفرك رأس*
+*┇اكتب : pat او patt سيتم الإرسال تلقائي*
+*┇⊛هذا الأمر يرسل ملصق عشوائي للانمي يقوم بلاكل*
+*┇اكتب : food او طعام*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يقوم بتغير حقوق الملصق*
+*┇اكتب wm او سرقه*  (${usedPrefix}سرقه النص1|النص2) 
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هاذا الأمر يقوم بإضافة تاثيرات على صور*
+*┇اكتب : cs او تاثيرات*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يقوم بإضافة فلتر على الصور*
+*┇اكتب : cs2 او فلتر* 
 `.trim()
 await conn.sendButtonVid(m.chat, pp, menuA, menuB, lenguajeGB.smsBotonM1(), '.menu', lenguajeGB.smsBotonM2(), '/allmenu', lenguajeGB.smsBotonM3(), '#inventario', fkontak, adReply)
 

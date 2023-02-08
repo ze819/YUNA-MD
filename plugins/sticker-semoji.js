@@ -1,5 +1,5 @@
 // Gracias a https://github.com/BrunoSobrino
-
+/*
 import { sticker } from '../lib/sticker.js'
 import MessageType from '@adiwajshing/baileys'
 import { EmojiAPI } from 'emoji-api' 
@@ -145,4 +145,4 @@ throw er
 handler.help = ['emoji <tipo> <emoji>']
 handler.tags = ['sticker'] 
 handler.command = ['emoji', 'smoji', 'semoji']
-export default handler
+export default handler*/

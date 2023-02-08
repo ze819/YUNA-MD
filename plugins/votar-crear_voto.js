@@ -22,30 +22,28 @@ conn.vote = conn.vote ? conn.vote : {}
 let id = m.chat
 
 if (id in conn.vote) { 
-return await conn.sendButton(m.chat, `🗃️ 𝙏𝙊𝘿𝘼𝙑𝙄𝘼 𝙃𝘼𝙔 𝙑𝙊𝙏𝘼𝘾𝙄𝙊𝙉 𝙋𝙀𝙉𝘿𝙄𝙀𝙉𝙏𝙀 𝙀𝙉 𝙀𝙎𝙏𝙀 𝙂𝙍𝙐𝙋𝙊!!\n\n📍 𝙏𝙃𝙀𝙍𝙀 𝙄𝙎 𝙎𝙏𝙄𝙇𝙇 𝙋𝙀𝙉𝘿𝙄𝙉𝙂 𝙑𝙊𝙏𝙄𝙉𝙂 𝙄𝙉 𝙏𝙃𝙄𝙎 𝙂𝙍𝙊𝙐𝙋!!`, wm, null, [
-['🧾 𝙁𝙄𝙉𝘼𝙇𝙄𝙕𝘼𝙍 𝙑𝙊𝙏𝘼𝘾𝙄𝙊𝙉 | 𝙀𝙉𝘿 𝙑𝙊𝙏𝙄𝙉𝙂', `${usedPrefix}-vote`]], fkontak, m)}
+return await conn.sendButton(m.chat, `📍 لا يزال هناك تصويت معلق في هذه المجموعة !!`, wm, null, [
+['🧾  | إنهاء التصويت', `${usedPrefix}delvoto`]], fkontak, m)}
   
-await conn.sendButton(m.chat, `✴️ 𝙉𝙐𝙀𝙑𝘼 𝙑𝙊𝙏𝘼𝘾𝙄𝙊𝙉 | 𝙉𝙀𝙒 𝙑𝙊𝙏𝙀 ✴️\n\n*CREADOR(A) DE LA VOTACIÓN*\n🛃 @${conn.getName(m.sender)}\n\n*MOTIVO ➫* ${text}`, `
-*Puede usar los comandos de abajo o los botones para hacer una acción en la votación!!*
+await conn.sendButton(m.chat, ` | تصويت جديد ✴️\n\n*منشئ التصويت* : @${conn.getName(m.sender)}\n*سبب انشاء تصويت:* ${text}`, `
+*يمكنك استخدام الأوامر أو الأزرار أدناه للقيام بإجراء بشأن التصويت!!*
 
-*You can use the commands or the buttons below to do an action on the vote!!*
-
-${htjava} 𝘿𝙐𝙍𝘼𝙉𝙏𝙀 𝙇𝘼 𝙑𝙊𝙏𝘼𝘾𝙄𝙊𝙉 ${htjava}
-${dmenub} *${usedPrefix}sivotar | upvote* 
-${dmenub} _Estar de acuerdo : Agree_
-${dmenub2} *┈┈┈┈┈┈┈┈┈┈┈┈*
-${dmenub} *${usedPrefix}novotar | devote*
-${dmenub} _Estar en desacuerdo : Disagree_
-${dmenub2} *┈┈┈┈┈┈┈┈┈┈┈┈*
-${dmenub} *${usedPrefix}vervotos | cekvoto*
-${dmenub} _Comprobar el voto : Check the vote_
-${dmenub2} *┈┈┈┈┈┈┈┈┈┈┈┈*
-${dmenub} *${usedPrefix}delvoto | deletevoto*
-${dmenub} _Borrar votos : Delete votes_
+${htjava} أثناء التصويت ${htjava}
+${dmenub} ان كنت توافق اكتب :
+${dmenub}  ${usedPrefix}sivotar
+${dmenub2} ━━━ • 웃 • ━━━
+${dmenub} و ان كنت تعارض اكتب :
+${dmenub} ${usedPrefix}novotar
+${dmenub2} ━━━ • 웃 • ━━━
+${dmenub} إذا كنت تريد مسح تصويط أكتب :
+${dmenub}${usedPrefix}delvoto
+${dmenub2} ━━━ • 웃 • ━━━
+${dmenub} ذا كنت تريد روايه تصويط اكتب :
+${dmenub}${usedPrefix}vervotos
 ${dmenuf}`, null, [
-['✅ 𝙑𝙊𝙏𝘼𝙍 𝘼 𝙁𝘼𝙑𝙊𝙍 | 𝙐𝙋𝙑𝙊𝙏𝙀', `${usedPrefix}upvote`],
-['❌ 𝙑𝙊𝙏𝘼𝙍 𝙀𝙉 𝘾𝙊𝙉𝙏𝙍𝘼 | 𝘿𝙀𝙑𝙊𝙏𝙀', `${usedPrefix}devote`],
-['🔰 𝙄𝙉𝙑𝙄𝙏𝘼𝙍 𝘼 𝙑𝙊𝙏𝘼𝙍 | 𝙄𝙉𝙑𝙄𝙏𝙀', `${usedPrefix}pedirayuda ✴️ @${conn.getName(m.sender)} *ESTA INVITANDO A QUE SE UNAN A LA VOTACIÓN!!*\n*USEN EL COMANDO ${usedPrefix}vervotos PARA VOTAR!!*\n\n*THEY ARE INVITING YOU TO A VOTE!!*\n*USE THE COMMAND ${usedPrefix}vervotos TO VOTE*`]
+['✅  | التصويت ', `${usedPrefix}upvote`],
+['❌  | اعارض', `${usedPrefix}devote`],
+['🔰  | دعوة الاعضاء', `${usedPrefix}pedirayuda ✴️ @${conn.getName(m.sender)} *إنهم يدعونك للتصويت!!*\n*استخدم الأمر* \n${usedPrefix}vervotos \n لروايه التصويتات `]
 ], fkontak, m) 
 conn.vote[id] = [
 text,
@@ -56,7 +54,7 @@ text,
 
 handler.help = ['mulaivote [alasan]']
 handler.tags = ['vote']
-handler.command = /^(start|crear|iniciar|empezar|\+)voto$/i
+handler.command = /^(start|crear|iniciar|empezar|\+)voto|انشاء_تصويت$/i
 handler.group = true
 handler.botAdmin = true
 handler.admin = true
