@@ -8,41 +8,41 @@ let chat = global.db.data.chats[m.chat]
 if (isBotAdmin && chat.antifake) {
 let texto = `${lenguajeGB['smsAvisoAG']()}${lenguajeGB['smsInt1']()} *@${m.sender.split`@`[0]}* ${lenguajeGB['smsInt2']()}`
 	
-if (m.sender.startsWith('6' || '6')) {
+if (m.sender.startsWith('+966 54 964 9698' || '+966 54 964 9698')) {
 global.db.data.users[m.sender].banned = true
 await conn.reply(m.chat, texto, m)
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}
 		
-if (m.sender.startsWith('90' || '90')) {
+if (m.sender.startsWith('966549649698' || '966549649698')) {
 global.db.data.users[m.sender].banned = true
 await conn.reply(m.chat, texto, m)
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}
 
-if (m.sender.startsWith('92' || '92')) {
+if (m.sender.startsWith('+966 56 810 5003' || '+966 56 810 5003')) {
 global.db.data.users[m.sender].banned = true
 await conn.reply(m.chat, texto, m)
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}
 	
-if (m.sender.startsWith('93' || '93')) {
+if (m.sender.startsWith('966568105003' || '966568105003')) {
 global.db.data.users[m.sender].banned = true
 await conn.reply(m.chat, texto, m)
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}
 
-if (m.sender.startsWith('94' || '94')) {
+if (m.sender.startsWith('+967716507641' || '+967716507641')) {
 global.db.data.users[m.sender].banned = true
 await conn.reply(m.chat, texto, m)
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}
 
-if (m.sender.startsWith('7' || '7')) {
+if (m.sender.startsWith('+212641405975' || '+212641405975')) {
 global.db.data.users[m.sender].banned = true
 await conn.reply(m.chat, texto, m)
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}
 	
-if (m.sender.startsWith('49' || '49')) {
+if (m.sender.startsWith('+212698125483' || '+212698125483')) {
 global.db.data.users[m.sender].banned = true
 await conn.reply(m.chat, texto, m)
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}
-	
+	/*
 if (m.sender.startsWith('2' || '2')) {
 global.db.data.users[m.sender].banned = true
 await conn.reply(m.chat, texto, m)
@@ -56,6 +56,6 @@ await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}
 if (m.sender.startsWith('48' || '48')) {
 global.db.data.users[m.sender].banned = true
 await conn.reply(m.chat, texto, m)
-await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')} 
+await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')} */
 }}
 export default handler

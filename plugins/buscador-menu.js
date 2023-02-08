@@ -71,22 +71,20 @@ let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardi
 
 let menuA = `🎈 ${lenguajeGB['smsConfi2']()} *${username}*`.trim()
 
-let menuB = `╭┄〔 *${wm}* 〕┄⊱
-┊დ *${week}, ${date}*
-┊დ *${lenguajeGB['smsBotonM4']()} » ${Object.keys(global.db.data.users).length}* 
-┊
-┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
-┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
-┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
-
-⠇ ${lenguajeGB['smsTex1']()} 🔍
-∘ _${usedPrefix}animeinfo *texto*_
-∘ _${usedPrefix}mangainfo *texto*_
-∘ _${usedPrefix}google *texto*_
-∘ _${usedPrefix}letra | lirik *texto*_
-∘ _${usedPrefix}ytsearch | yts *texto*_
-∘ _${usedPrefix}wiki | wikipedia *texto*_
+let menuB = ` *تزكر قبل كل أمر يجب أن تستخدم ${usedPrefix}*
+*┇⊛*  ${lenguajeGB['smsTex1']()} 🔍
+*┇⊛هذا الأمر يقوم بالبحث عن ما تريد مستخدم محرك Google*
+*┇اكتب : بحث (عن ماذا تبحث)*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يحول فيديو إلى صوت*
+*┇اكتب : vn*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يقوم بالبحث عن كلمات اغنية*
+*┇اكتب بحث1 او lirik*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يقوم بإحضار المعلومات مستخدم موقع (ويكيبيديا)*
+*┇اكتب : ويكي او wiki*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
 `.trim()
 
 await conn.sendButtonVid(m.chat, pp, menuA, menuB, lenguajeGB.smsBotonM1(), '.menu', lenguajeGB.smsBotonM2(), '/allmenu', lenguajeGB.smsBotonM3(), '#inventario', fkontak, adReply)
@@ -98,6 +96,7 @@ console.log(e)
 }}
 
 handler.command = /^(buscarmenu)$/i
+handler.register = true
 //handler.register = true
 handler.exp = 50
 export default handler

@@ -1,21 +1,18 @@
 global.math = global.math ? global.math : {}
 let handler  = async (m, { conn, args, usedPrefix, command }) => {
-let mat =`${lenguajeGB['smsAvisoIIG']()}✨ 𝙋𝙐𝙀𝘿𝙀 𝙐𝙎𝘼𝙍 𝙇𝙊𝙎 𝘽𝙊𝙏𝙊𝙉𝙀𝙎 𝙊 𝙀𝙎𝘾𝙍𝙄𝘽𝙄𝙍 𝙇𝘼 𝘿𝙄𝙁𝙄𝘾𝙐𝙇𝙏𝘼𝘿\n✨ 𝙔𝙊𝙐 𝘾𝘼𝙉 𝙐𝙎𝙀 𝙏𝙃𝙀 𝘽𝙐𝙏𝙏𝙊𝙉𝙎 𝙊𝙍 𝙒𝙍𝙄𝙏𝙀 𝙏𝙃𝙀 𝘿𝙄𝙁𝙁𝙄𝘾𝙐𝙇𝙏𝙔
+let mat =`${lenguajeGB['smsAvisoIIG']()}✨ يمكنك استخدام الأزرار أو كتابة الصعوبة
 
-𝙉𝙄𝙑𝙀𝙇 𝘿𝙀 𝘿𝙄𝙁𝙄𝘾𝙐𝙇𝙏𝘼𝘿 | 𝘿𝙄𝙁𝙁𝙄𝘾𝙐𝙇𝙏𝙔 
+صعب 
 ${Object.keys(modes).join('  |  ')}
-
-𝙀𝙅𝙀𝙈𝙋𝙇𝙊 | 𝙀𝙓𝘼𝙈𝙋𝙇𝙀
+ | مثل
 ${usedPrefix + command} noob
 ${usedPrefix + command} impossible2
-
-😼 𝙈𝙄𝙀𝙉𝙏𝙍𝘼𝙎 𝙈𝘼𝙎 𝘿𝙄𝙁𝙄𝘾𝙐𝙇𝙏𝘼𝘿 𝙈𝘼𝙔𝙊𝙍 𝙍𝙀𝘾𝙊𝙈𝙋𝙀𝙉𝙎𝘼
-😼 𝙈𝙊𝙍𝙀 𝘿𝙄𝙁𝙁𝙄𝘾𝙐𝙇𝙏𝙔 𝙔𝙊𝙐 𝘾𝘼𝙉 𝙂𝙀𝙏 𝙏𝙃𝙀 𝙂𝙍𝙀𝘼𝙏𝙀𝙍 𝙍𝙀𝙒𝘼𝙍𝘿
+ المزيد من الصعوبة يمكنك الحصول على مكافأة أكبر
 `.trim()
 if (args.length < 1) return conn.sendHydrated(m.chat, wm, mat, null, null, null, null, null, [
-['😋 𝙁𝙖𝙘𝙞𝙡 | 𝙀𝙖𝙨𝙮', `${usedPrefix + command} easy`], 
-['😎 𝘿𝙞𝙛𝙞𝙘𝙞𝙡 | 𝙃𝙖𝙧𝙙', `${usedPrefix + command} hard`], 
-['🤑 𝙀𝙭𝙩𝙧𝙚𝙢𝙤 | 𝙀𝙭𝙩𝙧𝙚𝙢𝙚', `${usedPrefix + command} extreme`]], m)
+['😋  | سهل', `${usedPrefix + command} easy`], 
+['😎  | صعب', `${usedPrefix + command} hard`], 
+['🤑  | صعب جدا', `${usedPrefix + command} extreme`]], m)
   
 let mode = args[0].toLowerCase()
 if (!(mode in modes)) return conn.sendHydrated(m.chat, wm, mat, null, null, null, null, null, [

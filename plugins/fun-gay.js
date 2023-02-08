@@ -1,4 +1,4 @@
-let handler = async (m, { conn }) => {
+/*let handler = async (m, { conn }) => {
 let vn = './media/gay2.mp3'
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 conn.sendFile(m.chat, global.API('https://some-random-api.ml', '/canvas/gay', {  
@@ -12,3 +12,4 @@ handler.help = ['gay']
 handler.tags = ['maker']
 handler.command = /^(gay)$/i
 export default handler
+*/

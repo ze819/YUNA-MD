@@ -70,43 +70,53 @@ let fsizedoc = '1'.repeat(10)
 let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: wm, body: '👋 ' + username, mediaUrl: ig, description: 'Hola', previewType: 'PHOTO', thumbnail: await(await fetch(gataMenu.getRandom())).buffer(), sourceUrl: redesMenu.getRandom() }}}
 
 let menuA = `🪄 ${lenguajeGB['smsConfi2']()} *${username}*`.trim()
-let menuB = `╭┄〔 *${wm}* 〕┄⊱
-┊დ *${week}, ${date}*
-┊დ *${lenguajeGB['smsBotonM4']()} » ${Object.keys(global.db.data.users).length}* 
-┊
-┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
-┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
-┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
-
-⠇ ${lenguajeGB['smsTex9']()} 🚀
-∘ _${usedPrefix}imagen | image *texto*_
-∘ _${usedPrefix}pinterest | dlpinterest *texto*_
-∘ _${usedPrefix}wallpaper|wp *texto*_
-∘ _${usedPrefix}play | play2 *texto o link*_
-∘ _${usedPrefix}play.1 *texto o link*_
-∘ _${usedPrefix}play.2 *texto o link*_ 
-∘ _${usedPrefix}ytmp3 | yta *link*_
-∘ _${usedPrefix}ytmp4 | ytv *link*_
-∘ _${usedPrefix}pdocaudio | ytadoc *link*_
-∘ _${usedPrefix}pdocvieo | ytvdoc *link*_
-∘ _${usedPrefix}tw | twdl | twitter *link*_
-∘ _${usedPrefix}spotify | music *text*_
-∘ _${usedPrefix}facebook | fb *link*_
-∘ _${usedPrefix}instagram *link video o imagen*_
-∘ _${usedPrefix}verig | igstalk *usuario(a)*_
-∘ _${usedPrefix}ighistoria | igstory *usuario(a)*_
-∘ _${usedPrefix}tiktok *link*_
-∘ _${usedPrefix}tiktokfoto | tiktokphoto *usuario(a)*_
-∘ _${usedPrefix}vertiktok | tiktokstalk *usuario(a)*_
-∘ _${usedPrefix}mediafire | dlmediafire *link*_
-∘ _${usedPrefix}clonarepo | gitclone *link*_
-∘ _${usedPrefix}clima *país ciudad*_
-∘ _${usedPrefix}consejo_
-∘ _${usedPrefix}frase_
-∘ _${usedPrefix}frase2_
-∘ _${usedPrefix}morse codificar *texto*_
-∘ _${usedPrefix}morse decodificar *morse*_
+let menuB = ` *تزكر قبل كل أمر يجب أن تستخدم ${usedPrefix}*
+*┇⊛* ${lenguajeGB['smsTex9']()} 🚀
+*┇⊛هذا الأمر يقوم بإحضار صوره لك مستخدم محرك بحث Google*
+*┇اكتب : صور أو image*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يقوم بإحضار لك صور مستخدم محرك بحث Pinterest*
+*┇اكتب : p او pt*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يقوم بإحضار صوره من الويب*
+*┇اكتب : ويب او wp*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يقوم بتحميل الفديوهات او صوت من يوت يوب*
+*┇اكتب : play او py او يوتيوب*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يقوم بإرسال حذم ملصقات*
+*┇اكتب : ملصقات*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يقوم بتحميل من فيس بوك*
+*┇اكتب : فيس أو fb*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يقوم بتحميل ملفات من Gethup*
+*┇اكتب : جيت أو gp*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يقوم بتحميل من Instagram*
+*┇اكتب : انستا او ig*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يقوم بتحميل الحالة(Status) من الانستغرام*
+*┇اكتب : ستوري او igstory*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يقوم بتحميل ميديافير(MediaFire)*
+*┇اكتب : dlmediafire او medl*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يقوم بتحميل من Tiktok*
+*┇اكتب : tt او tiktok او تيك*
+*┇⊰ا᯽ا⊱┈─ ─╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يبحث عن ناس في Tiktok*
+*┇اكتب : tiku او ttstalk*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يقوم بتحميل من Twitter*
+*┇اكتب : tw او توي*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يقوم يتشفير كلام مستخدم شفره Morse*
+*┇اكتب : مورس ترميز | مورس فك*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر *
+*┇اكتب : *
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
 `.trim()
 await conn.sendButtonVid(m.chat, pp, menuA, menuB, lenguajeGB.smsBotonM1(), '.menu', lenguajeGB.smsBotonM2(), '/allmenu', lenguajeGB.smsBotonM3(), '#inventario', fkontak, adReply)
 

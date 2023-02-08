@@ -1,6 +1,6 @@
 import { youtubeSearch, youtubedl, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper'
 let handler = async (m, { conn, command, text, usedPrefix }) => {
-  if (!text) throw `${lenguajeGB['smsAvisoMG']()}𝙀𝙎𝘾𝙍𝙄𝘽𝘼 𝙀𝙇 𝙉𝙊𝙈𝘽𝙍𝙀 𝙊 𝙏𝙄𝙏𝙐𝙇𝙊\n𝙀𝙅𝙀𝙈𝙋𝙇𝙊\n*${usedPrefix + command} Billie Eilish - Bellyache*\n\n𝙒𝙍𝙄𝙏𝙀 𝙏𝙃𝙀 𝙉𝘼𝙈𝙀 𝙊𝙍 𝙏𝙄𝙏𝙇𝙀\n𝙀𝙓𝘼𝙈𝙋𝙇𝙀\n*${usedPrefix + command} Billie Eilish - Bellyache*`
+  if (!text) throw `${lenguajeGB['smsAvisoMG']()} اكتب الاسم أو العنوان\nمثل\n*${usedPrefix + command} ما تيسر من سورة التغابن*`
   await m.reply(wait)
   let vid = (await youtubeSearch(text)).video[0]
   if (!vid) throw 'Error'
@@ -8,54 +8,56 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
   const url = 'https://www.youtube.com/watch?v=' + videoId
 
   let captvid = `*𓆩 𓃠 𓆪 ✧═══ ${vs} ═══✧ 𓆩 𓃠 𓆪*
-ও *TÍTULO | TITLE:* 
+ও *العنوان:* 
 » ${title}
 ﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘
-ও *DESCRIPCIÓN | DESCRIPTION:*
+ও *وصف:*
 » ${description}
 ﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘
-ও *DURACION | DURATION:*
+ও *مدة:*
 » ${durationH}
 ﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘
-ও *VISTAS| VIEWS*:
+ও *طرق عرض*:
 » ${viewH}
 ﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘
-ও *PUBLICADO | PUBLISHED:* 
+ও *نشر:* 
 » ${publishedTime}
 
-*𓆩 𓃠 𓆪 ✧═══ ${vs} ═══✧ 𓆩 𓃠 𓆪*`
+*𓆩 ✧༺════ •⊰『 ${vs} 』⊱• ════༻✧ 𓆪*`
   conn.sendButton(m.chat, `*𓆩 𓃠 𓆪 ✧═══ ${vs} ═══✧ 𓆩 𓃠 𓆪*
-ও *TÍTULO | TITLE:*
+ও *العنوان*
 » ${title}
 ﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘
-ও *DESCRIPCIÓN | DESCRIPTION:*
+ও *وصف:*
 » ${description}
 ﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘
-ও *DURACION | DURATION:*
+ও *مدة:*
 » ${durationH}
 ﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘
-ও *VISTAS| VIEWS:*
+ও *طرق عرض:*
 » ${viewH}
 ﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘
-ও *PUBLICADO | PUBLISHED:* 
+ও *نشر* 
 » ${publishedTime}
-
-*𓆩 𓃠 𓆪 ✧═══ ${vs} ═══✧ 𓆩 𓃠 𓆪*`, author.trim(), await( await conn.getFile(thumbnail)).data, ['📽 🅥🅘🅓🅔🅞 📽', `${usedPrefix}getvid ${url} 360`], false, { quoted: m, 'document': { 'url':'https://wa.me/923470027813' },
+[⚠️] تحزير ان قمت بلكبس علي الكلمه في الأسفل "فيديو" فسيتم تنزيل الطلب فيديو
+*𓆩 𓃠 𓆪 ✧═══ ${vs} ═══✧ 𓆩 𓃠 𓆪*`, author.trim(), await( await conn.getFile(thumbnail)).data, ['📽 فــيـديـو 📽', `${usedPrefix}getvid ${url} 360`], false, { quoted: m, 'document': { 'url':'https://wa.me/393271166550' },
 'mimetype': global.dpdf,
 'fileName': `${vs}`,
 'fileLength': 666666666666666,
 'pageCount': 666,contextInfo: { externalAdReply: { showAdAttribution: true,
 mediaType:  2,
 mediaUrl: `${url}`,
-title: `🅖🅐🅣🅐🅑🅞🅣-🅜🅓`,
+title: `YUNA BOT`,
 body: wm,
-sourceUrl: 'https://github.com/GataNina-Li/GataBot-MD', thumbnail: await ( await conn.getFile(thumbnail)).data
-}} })
+sourceUrl: 'https://www.instagram.com/a_e_b_2003', thumbnail: await ( await conn.getFile(thumbnail)).data
+  }
+ } 
+})
   
-//let buttons = [{ buttonText: { displayText: '📽VIDEO' }, buttonId: `${usedPrefix}ytv ${url} 360` }]
-//let msg = await conn.sendMessage(m.chat, { image: { url: thumbnail }, caption: captvid, footer: author, buttons }, { quoted: m })
+  //let buttons = [{ buttonText: { displayText: '📽VIDEO' }, buttonId: `${usedPrefix}ytv ${url} 360` }]
+ //let msg = await conn.sendMessage(m.chat, { image: { url: thumbnail }, caption: captvid, footer: author, buttons }, { quoted: m })
 
-const yt = await await youtubedlv2(url).catch(async _ => await youtubedl(url)).catch(async _ => await youtubedlv3(url))
+  const yt = await await youtubedlv2(url).catch(async _ => await youtubedl(url)).catch(async _ => await youtubedlv3(url))
 const link = await yt.audio['128kbps'].download()
   let doc = { 
   audio: 
@@ -79,7 +81,7 @@ thumbnail: await(await conn.getFile(thumbnail)).data
 }
 handler.help = ['play4'].map(v => v + ' <pencarian>')
 handler.tags = ['downloader']
-handler.command = /^play4$/i
+handler.command = /^play4|py|يوتيوب$/i
 
 handler.exp = 0
 handler.limit = 2
@@ -89,4 +91,3 @@ export default handler
 function pickRandom(list) {
   return list[Math.floor(list.length * Math.random())]
 }
-

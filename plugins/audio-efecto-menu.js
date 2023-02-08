@@ -69,28 +69,21 @@ let fsizedoc = '1'.repeat(10)
 let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: wm, body: '👋 ' + username, mediaUrl: ig, description: 'Hola', previewType: 'PHOTO', thumbnail: await(await fetch(gataMenu.getRandom())).buffer(), sourceUrl: redesMenu.getRandom() }}}
 
 let menuA = `🎧 ${lenguajeGB['smsConfi2']()} *${username}*`.trim()
-let menuB = `╭┄〔 *${wm}* 〕┄⊱
-┊დ *${week}, ${date}*
-┊დ *${lenguajeGB['smsBotonM4']()} » ${Object.keys(global.db.data.users).length}* 
-┊
-┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
-┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
-┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
-
-⠇ ${lenguajeGB['smsTex2']()} 🧰
-∘ _${usedPrefix}bass_
-∘ _${usedPrefix}blown_
-∘ _${usedPrefix}deep_
-∘ _${usedPrefix}earrape_
-∘ _${usedPrefix}fast_
-∘ _${usedPrefix}fat_
-∘ _${usedPrefix}nightcore_
-∘ _${usedPrefix}reverse_
-∘ _${usedPrefix}robot_
-∘ _${usedPrefix}slow_
-∘ _${usedPrefix}smooth_
-∘ _${usedPrefix}tupai_
+let menuB = `𝄞 قم بكتابه الأمر و منشن صوت الذي تريد تعديله
+*┇⊛${lenguajeGB['smsTex2']()} 🧰*
+*┇⊛هذه الأوامر تقوم بتعديل الصوت*
+*┇اكتب :* _bass_
+*┇اكتب :* _blown_
+*┇اكتب :* _deep_
+*┇اكتب :* _earrape_
+*┇اكتب :* _fast_
+*┇اكتب :* _fat_
+*┇اكتب :* _nightcore_
+*┇اكتب :* _reverse_
+*┇اكتب :* _robot_
+*┇اكتب :* _slow_
+*┇اكتب :* _smooth_
+*┇اكتب :* _tupai_
 `.trim()
 await conn.sendButtonVid(m.chat, pp, menuA, menuB, lenguajeGB.smsBotonM1(), '.menu', lenguajeGB.smsBotonM2(), '/allmenu', lenguajeGB.smsBotonM3(), '#inventario', fkontak, adReply)
 

@@ -1,26 +1,82 @@
-import { youtubedl, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper'
 import fetch from 'node-fetch'
-let handler = async (m, { conn, args, usedPrefix, command }) => {
+import { youtubeSearch } from '@bochilteam/scraper'
+let handler = async (m, { conn, command, text, usedPrefix }) => {
+try {
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
-if (!args[0]) return conn.reply(m.chat, `${lenguajeGB['smsAvisoMG']()}𝙄𝙉𝙂𝙍𝙀𝙎𝙀 𝙀𝙇 𝙀𝙉𝙇𝘼𝘾𝙀 𝘿𝙀 𝙔𝙊𝙐𝙏𝙐𝘽𝙀 𝙋𝘼𝙍𝘼 𝘿𝙀𝙎𝘾𝘼𝙍𝙂𝘼𝙍 𝙀𝙇 𝙑𝙄𝘿𝙀𝙊\n𝙀𝙅𝙀𝙈𝙋𝙇𝙊\n*${usedPrefix + command} https://youtu.be/85xI8WFMIUY*\n\n𝙀𝙉𝙏𝙀𝙍 𝙏𝙃𝙀 𝙔𝙊𝙐𝙏𝙐𝘽𝙀 𝙇𝙄𝙉𝙆 𝙏𝙊 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿 𝙏𝙃𝙀 𝙑𝙄𝘿𝙀𝙊\n𝙀𝙓𝘼𝙈𝙋𝙇𝙀\n*${usedPrefix + command} https://youtu.be/c5gJRzCi0f0*`, fkontak, m)
-await conn.reply(m.chat, `${lenguajeGB['smsAvisoEG']()}𝙎𝙀 𝙀𝙎𝙏𝘼 𝘿𝙀𝙎𝘾𝘼𝙍𝙂𝘼𝙉𝘿𝙊 𝙎𝙐 𝙑𝙄𝘿𝙀𝙊, 𝙀𝙎𝙋𝙀𝙍𝙀 𝙐𝙉 𝙈𝙊𝙈𝙀𝙉𝙏𝙊 𝙋𝙊𝙍 𝙁𝘼𝙑𝙊𝙍\n\n𝙔𝙊𝙐𝙍 𝙑𝙄𝘿𝙀𝙊 𝙄𝙎 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿𝙄𝙉𝙂, 𝙒𝘼𝙄𝙏 𝘼 𝙈𝙊𝙈𝙀𝙉𝙏 𝙋𝙇𝙀𝘼𝙎𝙀`, fkontak, m)
-try {
-let q = '128kbps'
-let v = args[0]
-const yt = await youtubedl(v).catch(async _ => await youtubedlv2(v)).catch(async _ => await youtubedlv3(v))
-const dl_url = await yt.audio[q].download()
-const ttl = await yt.title
-const size = await yt.audio[q].fileSizeH
-await conn.sendFile(m.chat, dl_url, ttl + '.mp3', null, m, false, { mimetype: 'audio/mp4' })
+let grupos = [nna, nn, nnn, nnnt, nnntt, nnnttt]
+let gata = [img5, img6, img7, img8, img9]
+let enlace = { contextInfo: { externalAdReply: {title: wm + ' 🐈', body: 'support group' , sourceUrl: grupos.getRandom(), thumbnail: await(await fetch(gata.getRandom())).buffer() }}}
+let enlace2 = { contextInfo: { externalAdReply: { showAdAttribution: true, mediaUrl: yt, mediaType: 'VIDEO', description: '', title: wm, body: ' - 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽 ', thumbnailUrl: await(await fetch(img)).buffer(), sourceUrl: yt }}}
+let dos = [enlace, enlace2]
+
+if (!text) throw `${lenguajeGB['smsAvisoMG']()} اكتب الاسم أو العنوان\nمثل\n*${usedPrefix + command} Billie Eilish - Bellyache*`
+let vid = (await youtubeSearch(text)).video[0]
+if (!vid) throw `${lenguajeGB['smsAvisoFG']()} تعذر العثور على الصوت/الفيديو. جرب اسما أو لقبا آخر `
+let { title, description, thumbnail, videoId, durationH, viewH, publishedTime } = vid
+const url = 'https://www.youtube.com/watch?v=' + videoId
+ 
+await conn.sendButton(m.chat, wm, `*𓆩 𓃠 𓆪 ✧═══ ${vs} ═══✧ 𓆩 𓃠 𓆪*
+
+ও عنوان
+» ${title}
+﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘
+ও  | وصف
+» ${description}
+﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘
+ও  | نشر
+» ${publishedTime}
+﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘
+ও  | مدة
+» ${durationH}
+﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘
+ও   | طرق عرض
+» ${viewH}
+﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘
+ও الرابط
+» ${url}
+
+*𓆩 𓃠 𓆪 ✧═══ ${vs} ═══✧ 𓆩 𓃠 𓆪*`, thumbnail, [['𝗠 𝗘 𝗡 𝗨 ☘️', '/menu']], m, dos.getRandom())
+  
+const sections = [{
+title: comienzo + ' 📡 أنواع التنزيلات ' + fin,
+rows: [
+{title: "صوت (النوع 1)", rowId: `${usedPrefix}yta ${url}`, description: `${title}\n`},
+{title: "صوت (النوع2) ", rowId: `${usedPrefix}play.1 ${url}`, description: `${title}\n`},
+{title: "صوت (النوع ملف) ", rowId: `${usedPrefix}pdocaudio ${url}`, description: `${title}\n`},
+{title: "فيديو (النوع 1)", rowId: `${usedPrefix}ytv ${url}`, description: `${title}\n`},
+{title: "فيديو (النوع 2)", rowId: `${usedPrefix}play.2 ${url}`, description: `${title}\n`},
+{title: "فيديو (النوع ملف) ", rowId: `${usedPrefix}pdocvieo ${url}`, description: `${title}\n`}
+]},{
+title: comienzo + ' 🔎 بحث متقدم ' + fin,
+rows: [
+{title: "نتائج البحث", rowId: `${usedPrefix}ytsearch ${text}`}
+]}]
+
+const listMessage = {
+  text: `*اختر ما تريد القيام به مع ${text}*`,
+  footer: global.wm,
+  title: `${htki} *♻️ الاسبوعيه* ${htka}`,
+  buttonText: `🍄 اليرجير 🍁`,
+  sections
+}
+
+await conn.sendMessage(m.chat, listMessage, {quoted: fkontak})
 } catch {
 try {
-let lolhuman = await fetch(`https://api.lolhuman.xyz/api/ytaudio2?apikey=${lolkeysapi}&url=${args[0]}`)    
-let lolh = await lolhuman.json()
-let n = lolh.result.title || 'error'
-await conn.sendMessage(m.chat, { audio: { url: lolh.result.link }, fileName: `${n}.mp3`, mimetype: 'audio/mp4' }, { quoted: m })
-//await conn.sendFile(m.chat, lolh.result.link, `${n}.mp3`, null, m, false, { mimetype: 'audio/mp4' })    
-} catch {
-await conn.reply(m.chat, `${lenguajeGB['smsAvisoFG']()}𝙀𝙎 𝙋𝙊𝙎𝙄𝘽𝙇𝙀 𝙌𝙐𝙀 𝙀𝙇 𝘼𝙍𝘾𝙃𝙄𝙑𝙊 𝙎𝙀𝘼 𝙈𝙐𝙔 𝙋𝙀𝙎𝘼𝘿𝙊. 𝙄𝙉𝙏𝙀𝙉𝙏𝙀 𝘾𝙊𝙉 𝙊𝙏𝙍𝘼 𝙊𝙋𝘾𝙄𝙊𝙉 𝘿𝙀 𝘿𝙀𝙎𝘾𝘼𝙍𝙂𝘼\n\n𝙄𝙏 𝙄𝙎 𝙋𝙊𝙎𝙎𝙄𝘽𝙇𝙀 𝙏𝙃𝘼𝙏 𝙏𝙃𝙀 𝙁𝙄𝙇𝙀 𝙄𝙎 𝙑𝙀𝙍𝙔 𝙃𝙀𝘼𝙑𝙔. 𝙏𝙍𝙔 𝘼𝙉𝙊𝙏𝙃𝙀𝙍`, m)}
-}}
-handler.command = /^fgmp3|dlmp3|getaud|yt(a|mp3)$/i
+let vid2 = await (await fetch(`https://api.lolhuman.xyz/api/ytsearch?apikey=${lolkeysapi}&query=${text}`)).json()
+let { videoId, title, views, published, thumbnail } = await vid2.result[0]
+const url = 'https://www.youtube.com/watch?v=' + videoId
+let ytLink = await fetch(`https://api.lolhuman.xyz/api/ytplay2?apikey=${lolkeysapi}&query=${text}`)
+let jsonn = await ytLink.json()
+let aud = await jsonn.result.audio
+let capt = `ও  | عنوان: ${title}\nও  | نشر: ${published}\nও  | مشاهدات : ${views}`
+const buttons = [{buttonId: `#playlist ${title}`, buttonText: {displayText: ' نتائج البحث'}, type: 1}]
+const buttonMessage = { image: {url: thumbnail}, caption: capt, footer: ' جاري تحميل ارجوك انتظر...*', buttons: buttons, headerType: 4 }
+let msg = await conn.sendMessage(m.chat, buttonMessage, { quoted: m })
+conn.sendMessage(m.chat, { audio: { url: aud }, mimetype: 'audio/mp4', fileName: `${title}.mp3`}, {quoted: msg})
+} catch {  
+throw '╰⊱❗️⊱ *العمل الذي يساء استخدامه* ⊱❗️⊱╮ \n اكتب الاسم أو العنوان\nمثل\n*/play2 Billie Eilish - Bellyache*'}}}
+handler.help = ['play', 'play2'].map(v => v + ' <pencarian>')
+handler.tags = ['downloader']
+handler.command = /^play2?$/i
 export default handler

@@ -70,52 +70,49 @@ let fsizedoc = '1'.repeat(10)
 let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: wm, body: '👋 ' + username, mediaUrl: ig, description: 'Hola', previewType: 'PHOTO', thumbnail: await(await fetch(gataMenu.getRandom())).buffer(), sourceUrl: redesMenu.getRandom() }}}
 
 let menuA = `🎠 ${lenguajeGB['smsConfi2']()} *${username}*`.trim()
-let menuB = `╭┄〔 *${wm}* 〕┄⊱
-┊დ *${week}, ${date}*
-┊დ *${lenguajeGB['smsBotonM4']()} » ${Object.keys(global.db.data.users).length}* 
-┊
-┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
-┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
-┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
-
-⠇ ${lenguajeGB['smsTex10']()} 🎡
-∘ _${usedPrefix}mates | matemáticas | math_
-∘ _${usedPrefix}ppt *piedra : papel : tijera*_
-∘ _${usedPrefix}tictactoe | ttt *sala*_
-∘ _${usedPrefix}deltictactoe | delttt_
-∘ _${usedPrefix}topgays_
-∘ _${usedPrefix}topotakus_
-∘ _${usedPrefix}toppajer@s_
-∘ _${usedPrefix}topput@s_
-∘ _${usedPrefix}topintegrantes | topintegrante_
-∘ _${usedPrefix}toplagrasa | topgrasa_
-∘ _${usedPrefix}toppanafrescos | toppanafresco_
-∘ _${usedPrefix}topshiposters | topshipost_
-∘ _${usedPrefix}toplindos | toplind@s_
-∘ _${usedPrefix}topfamosos | topfamos@s_
-∘ _${usedPrefix}topparejas | top5parejas_
-∘ _${usedPrefix}gay | gay *@tag*_
-∘ _${usedPrefix}gay2 *nombre : @tag*_
-∘ _${usedPrefix}lesbiana *nombre : @tag*_
-∘ _${usedPrefix}manca *nombre : @tag*_
-∘ _${usedPrefix}manco *nombre : @tag*_
-∘ _${usedPrefix}pajero *nombre : @tag*_
-∘ _${usedPrefix}pajera *nombre : @tag*_
-∘ _${usedPrefix}puto *nombre : @tag*_
-∘ _${usedPrefix}puta *nombre : @tag*_
-∘ _${usedPrefix}rata *nombre : @tag*_
-∘ _${usedPrefix}love *nombre : @tag*_
-∘ _${usedPrefix}doxear *nombre : @tag*_
-∘ _${usedPrefix}doxxeame_
-∘ _${usedPrefix}pregunta *texto*_
-∘ _${usedPrefix}apostar | slot *cantidad*_
-∘ _${usedPrefix}formarpareja_
-∘ _${usedPrefix}dado_
-∘ _${usedPrefix}verdad_
-∘ _${usedPrefix}reto_
-∘ _${usedPrefix}multijuegos_
-∘ _${usedPrefix}juegos_
+let menuB = ` *تزكر قبل كل أمر يجب أن تستخدم ${usedPrefix}*
+*┇⊛* ${lenguajeGB['smsTex10']()} 🎡
+*┇⊛هذا الأمر ينشأ لعبه X/O*
+*┇اكتب : ttt او xo*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر ينشأ لعبه حجر ورق مقص*
+*┇اكتب : pvp*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يمسح غرفه XO*
+*┇اكتب : اكتب #مسح / del*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يجاوبك على سوال بـ:لا,اي, ممكن,*
+*┇ امممم بفكر,اكيد لا, ربما لا, ربما نعم, بفكر في امر*
+*┇اكتب : يونا او سوال (اكتب بعده سوال لي تبغا*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يعطيك نسبة ذكاء /غباء/حب/جمال الشخص*
+*┇اكتب : ذكاء @منشن*
+*┇اكتب : غباء @منشن*
+*┇اكتب : حب @منشن*
+*┇اكتب : جمال @منشن*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يبين لك شخصية ناس*
+*┇اكتب : شخصية او كشف (@منشن)*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱* 
+*┇⊛هذا الأمر عباره عن لعبه حظ او تخصر او تفوز يتم استخدام XP*
+*┇اكتب : حظ او slot*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يرد على اي كلام مستخدم نظام Simi*
+*┇اكتب : سوال او يونا (نص)*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱* 
+*┇⊛هذا الأمر ينشء لعبة رمي العملة*
+*┇اكتب : دوران*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر برسل ملصق نرد يدور بشكل عشوائي*
+*┇اكتب : دادو*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر برسل أسأله عشوائيه*
+*┇اكتب : تك*
+*┇⊛هذا الأمر يرسل اسأله لو خيروك*
+*┇اكتب : لو*
+*┇⊛هذا الأمر يرسل اسأله انمي عشوائي*
+*┇اكتب : كت*
+*┇⊰ا᯽ا⊱┈───❊╌──┈⊰ا᯽ا⊱*
 `.trim()
 await conn.sendButtonVid(m.chat, pp, menuA, menuB, lenguajeGB.smsBotonM1(), '.menu', lenguajeGB.smsBotonM2(), '/allmenu', lenguajeGB.smsBotonM3(), '#inventario', fkontak, adReply)
 

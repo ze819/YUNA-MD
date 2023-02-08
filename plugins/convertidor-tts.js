@@ -2,7 +2,7 @@ import gtts from 'node-gtts'
 import { readFileSync, unlinkSync } from 'fs'
 import { join } from 'path'
 
-const defaultLang = 'es'
+const defaultLang = 'ar'
 let handler = async (m, { conn, args, usedPrefix, command }) => {
 
 let lang = args[0]
@@ -18,17 +18,17 @@ try { res = await tts(text, lang) }
 catch (e) {
 m.reply(e + '')
 text = args.join(' ')
-if (!text) throw `${lenguajeGB['smsAvisoMG']()}𝙀𝙎𝘾𝙍𝙄𝘽𝘼 𝙐𝙉 𝙏𝙀𝙓𝙏𝙊 𝙋𝘼𝙍𝘼 𝘾𝙊𝙉𝙑𝙀𝙍𝙏𝙄𝙍 𝘼 𝙉𝙊𝙏𝘼 𝘿𝙀 𝙑𝙊𝙕\n𝙀𝙅𝙀𝙈𝙋𝙇𝙊\n*${usedPrefix + command} es GataBot*\n\n𝙒𝙍𝙄𝙏𝙀 𝘼 𝙏𝙀𝙓𝙏 𝙏𝙊 𝘾𝙊𝙉𝙑𝙀𝙍𝙏 𝙏𝙊 𝘼 𝙑𝙊𝙄𝘾𝙀 𝙈𝙀𝙈𝙊\n𝙀𝙓𝘼𝙈𝙋𝙇𝙀\n*${usedPrefix + command} es GataBot*`
+if (!text) throw `${lenguajeGB['smsAvisoMG']()}\nكتابة نص لتحويله إلى صوتية\nمثل\n*${usedPrefix + command} ar مرحبا*`
 res = await tts(text, defaultLang)
 } finally {
 if (res) conn.sendFile(m.chat, res, 'tts.opus', null, m, true)
 }}
-handler.help = ['tts <lang> <teks>']
+handler.help = ['tts <لغة> <نص>']
 handler.tags = ['tools']
-handler.command = /^g?tts|totts$/i
+handler.command = /^g?tts|انطق$/i
 export default handler
 
-function tts(text, lang = 'es') {
+function tts(text, lang = 'ar') {
 console.log(lang, text)
 return new Promise((resolve, reject) => {
 try {

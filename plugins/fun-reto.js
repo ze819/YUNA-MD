@@ -1,14 +1,11 @@
 let handler  = async (m, { conn, usedPrefix, command }) => {
-//conn.reply(m.chat,`*┌────「 RETO 」─*\n*“${pickRandom(global.bucin)}”*\n*└────「 Mystic 」─*`, m)
-conn.sendHydrated(m.chat, `╭━━━━━[ 𝙍𝙀𝙏𝙊 😏 ]━━━━⬣\n*“${pickRandom(global.bucin)}”*\n╰━━━━━━[ ${vs} ]━━━━━⬣`, wm, null, md, '𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿', null, null, [
-['𝙊𝙩𝙧𝙖 𝙫𝙚𝙯 | 𝘼𝙜𝙖𝙞𝙣 🧐', `${usedPrefix}reto`],
-['𝙏𝙤𝙥𝙨 | 𝙍𝙖𝙣𝙠𝙞𝙣𝙜 🏆', `${usedPrefix}top`],
-['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ | 𝘽𝙖𝙘𝙠 𝙩𝙤 𝙈𝙚𝙣𝙪 ☘️', `${usedPrefix}menu`]
+conn.sendHydrated(m.chat, `╭━━━━━[ *سوأل* ]━━━━⬣\n*“${pickRandom(global.bucin)}”*\n╰━━━━━━[ ${vs} ]━━━━━⬣`, wm, null, md, '════ •『 𝒚𝒖𝒏𝒂 𝒃𝒐𝒕 』• ════', null, null, [
+['سوال اخر', `${usedPrefix}تك`]
 ], m,)}
 
-handler.help = ['reto']
+handler.help = ['تك']
 handler.tags = ['fun']
-handler.command = /^reto/i
+handler.command = /^تك/i
 handler.fail = null
 export default handler
 
@@ -16,92 +13,315 @@ function pickRandom(list) {
   return list[Math.floor(list.length * Math.random())]
 }
 
-// https://jalantikus.com/tips/kata-kata-bucin/
 global.bucin = [
-"Pasa el pack de una hormiga",
-"Dile a tus amigos que te vas a vivir a EU y mándame una captura de lo que te haya dicho",
-"Grita desde la ventana que quieres mamar y mándame el vídeo",
-"Escribe el nombre de tu crush",
-"Debes de poner el nombre de mi creador en tu estado de WhatsApp, sin dar contexto",
-"Envíame una fotografía tuya",
-"Debes de dibujar en alguna parte de tu cuerpo el nombre de algún integrante del grupo, luego realiza una foto y envíala",
-"Hazte una foto dándole un beso a una Televisión",
- "Mándame una fotografía en ropa interior",
-"Escribe en tu estado de WhatsApp que te gusta comer tierra",
-"Debes de poner la fotografía de un participante del grupo que sea del sexo opuesto al tuyo en tu perfil de WhatsApp durante 3 días 📸📸",
-"Tienes que mandar un audio cantando la canción: Un pato que va cantando alegremente cua cua 🦆",
-"Envía un mensaje a tu ex y dile todavía me gustas", "Envía un audio diciendo amo a The Shadow Brokers - Bot", 
-"Dile a tu crush que la amas y pasa captura al grupo", "Envía un audio cantando", 
-"Envía una foto en la que salgas tu sin taparte la cara ni nada", "Envía un video bailando", 
-"Invita a personas que no conoces a tomarse una selfi contigo y luego envíalo al grupo", 
-"Elija algunos números aleatorios de sus contactos y envíeles un mensaje de texto con el mensaje 'Estoy embarazad@'.", 
-"¡Tome cualquier bebida que esté cerca de usted, luego mézclela con chile y beba!", 
-"Tome un número aleatorio de sus contactos, llámelo y dígale 'te amo' ", 
-"Compre la comida más barata en la cafetería (o compre una botella de agua) y diga entre sollozos a sus compañeros de clase: 'Esta ... es la comida más cara que he comprado)' ", 
-" Compre una botella de coca cola y salpique flores con ella frente a la multitud.", 
-" Párese cerca del refrigerador, cierre los ojos, elija alimentos al azar en él, incluso cuando coma, sus ojos deben estar cerrados.", 
-" De pie en medio de la cancha de baloncesto y gritando: 'TE AMO MI PRÍNCIPE / PRINCESA' ", 
-"Presenta tus respetos a alguien de la clase y luego di: 'Estoy a su servicio, Majestad' ", 
-" Caminando aplaudiendo y cantando la canción 'Feliz cumpleaños' de la clase al pasillo.", 
-" Arrodíllate sobre una rodilla y di '¿Cásate conmigo?' la primera persona en entrar a la habitación.", 
-" Haz un tocado absurdo con tejido, sea lo que sea, sigue pidiendo poses frente a la cámara, sigue subiendo", 
-"Dile 'ERES HERMOSA / MUY HERMOSA, NO MIENTES' a la chica que crees que es la más bonita de esta clase.", 
-" Dile a alguien en clase: 'Primero me dijeron que era tu gemelo, nos separamos y luego me sometí a una cirugía plástica. Y esto es lo más serio que he dicho' ", 
-" Tirar el cuaderno de alguien a la basura, frente a sus ojos, diciendo 'Este libro nadie puede entender' ", 
-" ¡Arranca el pelo de tu propia pierna 3 veces!", 
-" Chatea con tus padres, diles que los extrañas con emoticonos tristes.", 
-" Intente buscar en Google cosas aterradoras o ridículas como tripofobia, etc.", 
-" Siéntese relajado en medio de la cancha de baloncesto mientras finge que es una playa para tomar el sol.", 
-" Llena tu boca de agua y tienes que aguantar hasta dos rondas, si te ríes y derramas o bebes, entonces tienes que volver a llenar y agregar una ronda más.", 
-" Salude a la primera persona que entre en esta sala y diga '¡Bienvenido a Quién quiere ser millonario!' ", 
-"Envía un mensaje de texto a tus padres '¡Hola, hermano! ¡Acabo de comprar el último número de la revista Playboy!' ", 
-"Envíales un mensaje de texto a tus padres: 'Mamá, papá, ya sé que soy un niño adoptado del orfanato. No ocultes esto más'.", 
-" Envía tres números aleatorios en tus contactos y escribe 'Me acabo de convertir en modelo de la revista Playboy' ", 
-" ¡Come una cucharada de salsa de soja dulce y salsa de soja!", 
-" Come algo pero no uses las manos.", 
-" Enojarse con sus amigos que no vienen a pesar de que tienen una cita para jugar 'Verdad o Reto' juntos", 
-"¡Rompe el huevo con la cabeza!", 
-"Coma alimentos que se hayan mezclado y tendrán un sabor extraño, pero asegúrese de que los alimentos no sean dañinos para la salud a largo o corto plazo.", 
-"Baila como Girls 'Generation para los niños frente a la clase, o baila como Super Junior para las niñas.", 
-"Izar el asta de la bandera sin la bandera.", 
-"Hablando de la persona que te gusta, de tus amigos más cercanos, del sexo opuesto que no conoces en absoluto y cosas por el estilo.", 
-"Copia los peinados de todos tus amigos.", 
-"Cantando la canción HAI TAYO frente a mucha gente mientras baila", 
-"Cante la canción Baby Shark en voz alta en el aula.", 
-"Pedir prestado algo a los vecinos", 
-"Pide la firma de uno de los profesores más feroces mientras dices 'Eres verdaderamente la persona que más admiro en el mundo' ", 
-" Pídale dinero a alguien (al azar ) en la calle diciendo 'No tengo dinero para tomar un angkot'.", 
-" Beba algo que haya sido preparado / acordado, pero asegúrese de que no sea peligroso, puede ser como beber jarabe mezclado con salsa de soja.", 
-" Hablando con el emoticono-miedo de la persona que te gusta, está bien conversar con lo que quieras, a través de cualquier medio que puedas.", 
-" Canta tu película de Disney favorita fuera de casa mientras gritas.", 
-" Nombra de 1 azul a 20 azules rápidamente y no debes cometer ningún error. Si está mal, debe repetirse desde el principio.", 
-" Póngase una corona de papel de copia y diga a todos en la habitación 'HONOR AL REY' mientras señala a cada persona con una regla.", 
-" Vuelve a ponerte los pantalones hasta la mañana siguiente.", 
-" Abraza a la persona que NO te agrada en clase y di: 'Muchas gracias por ser la mejor persona para mí' ", 
-" Ve a un campo amplio, luego corre lo más rápido posible mientras dices 'Estoy loco, estoy loco' ", 
-" Elija una flor y luego conéctela a alguien que no conoce (debe ser del sexo opuesto)", 
-" Elige a una persona al azar en la calle, luego di 'No sabes que eres hermosa' (ala One Direction)", 
-" Fingir estar poseído ejm: poseído por un tigre, etc.", 
-" Pídale que silbe ya que su boca está nuevamente llena de comida.", 
-" Pide ser un mesero para que te sirva con tus amigos para el almuerzo.", 
-" Dígales que usen calcetines para hacer guantes.", 
-"Dígales que usen el sombrero más extraño / el casco más absurdo durante la próxima ronda.", 
-"Llama a tu mamá y dile 'mamá, quiero casarme lo antes posible' ", 
-"Llama a tu ex y di 'te extraño' ", 
-"Cambia de ropa con la persona más cercana hasta la siguiente ronda.", 
-"Actualice el estado en WhatsApp lo que sea con palabras que comiencen con 'S' ", 
-"Sube un video de canto a YouTube que esté cantando canciones populares.", 
-"Colorea tus uñas de las manos y de los pies de diferentes colores durante una semana.", 
-"come 2 cucharadas de arroz sin guarniciones", 
-"Envie el emoji '🦄💨' cada vez que escriba en un grupo 1 día", 
-"diga '¡Bienvenido a Quién quiere ser millonario!' a todos los grupos que tienes", 
-"canta el coro de la última canción que tocaste", 
-"Envia un audio de voz a tu ex / enamorado / novia, dile hola (nombre), quiero llamar, solo un momento. Te Extraño🥺👉🏼👈🏼 ", 
-"Dile a la gente al azar: Primero me dijeron que era tu gemelo, nos separamos y luego me sometí a una cirugía plástica. Y esto", 
-"¡Haz 1 rima para el primer jugador!", 
-"cuenta tu propia versión de cosas vergonzosas", 
-"cambiar el nombre a 'Gay' durante 24 horas", 
-"¡Menciona tu tipo de novia!", 
-"Di 'Estoy enamorado de ti, ¿quieres ser mi novio o no?' al último sexo opuesto con el que conversaste en WhatsApp, espera a que responda", 
-"Háblale a tu ex por WhatsApp y dile 'te amo, por favor vuelve'. Manda una captura de pantalla como evidencia de reto cumplido!"
+"لو قررت تقفل جوالك يوم كامل مين تتوقع أنه يفتقدك ؟",
+"اكثر كذبة تقولها ؟",
+"شيء مستحيل انك تاكله ؟",
+"ما السيء في هذه الحياة ؟",
+"هل لديك الاستعداد القيام ببعض أمور المنزل لمساعدة الأم أو الزوجة؟",
+"اعلى نسبة جبتها بحياتك الدراسية ؟",
+"ما هو الشيء الذي تخاف أن تفقده؟",
+" إذا كان لديك الفرصة لتغيير شيء واحد فقط في حياتك، فماذا سوف تغير؟", 
+"مرة سويت جميل و نكره شخص ؟ ", 
+" هل سبق ورسبت في المدرسة؟ وكم عدد المرات؟",
+"تنسد نفسك عن الاكل لو زعلت ؟ ",  
+" إذا تم إيداعك في مشفى المجانين خطئًا، فكيف سوف تثبت لهم أنك عاقل؟", 
+"تعتقد اشباهك الاربعين عايشين حياة حلوة ؟ ", 
+"من الشخص الاقرب لقلبك؟. ", 
+" منشن شخصين تحسهم نفس الاسلوب او الشخصية ..", 
+" كلمه لشخص خانك!؟.",
+ "لو حياتك عبارة عن كتاب .. وش بيكون اسمه ؟ ",
+ " اذا انسجنت وش تتوقع بتكون التهمة الي عليك ؟", 
+" هل تؤمن بالسحر والحسد؟ ولماذا؟", 
+"تترك احد عشان ماضيه سيء ؟ ", 
+"اشياء م تسويها غير اذا كنت مروق ؟ ",
+ " أيهما تفضل، العقل أم القلب؟",
+ " شخصية تقهرك ؟",
+ " منشن.. شخص تقوله  *انت أسطورة* ",
+ "ما هو أكثر شيء ترغب في نسيانه؟", 
+ "شعور ودك يموت ؟ ",
+ "هل تستطيع أن تعيش بدون أصدقاء؟ ",
+ " التاريخ المنتظر بالنسبة لك ؟", 
+" وش اسم الحي الي ساكن فيه ؟", 
+"هل ترى نفسك شخص اجتماعي أم انطوائي؟ ", 
+"شخصية كرتونية تأثرت فيها وانت صغير ؟ ",
+ " ‏ماذا ستختار من الكلمات لتعبر لنا عن حياتك التي عشتها الى الآن؟",
+ " منشن : شخص تحس انه نكبه ؟",
+ " من هو آخر شخص تفكر به قبل أن تنام؟",
+ "مين اقرب شخص لك بالعائلة ؟ ", 
+ "ما هو أكثر شيء يخيفك؟ ",
+ " اغنية ناشبه في مخك ؟",
+ "من هم أصدقائك المقربين منك؟ ", 
+" شيء حلو صار لك اليوم ؟", 
+" أغمض عينيك ما هو المكان الذي تخيلت نفسك فيه؟", 
+" جربت الشهرة او تتمناها ؟",
+ " هل يمكنك أن تضحي بصديق عمرك من أجل المصلحة؟",
+ " أغرب شي اشتهيت تأكله فجأة ؟",
+ " التاريخ المنتظر بالنسبة لك ؟",
+ " ما هي أكثر صفة تكرهها في صديقك المقرب؟", 
+ "وش اسمك؟",
+
+"حرف تحبه ؟",
+
+"اكثر شيء تحس انه مات ف مجتمعنا؟",
+
+"القصيرآت دايم حلوات تتفق .؟",
+
+"إذا وجدت ورقة بيضاء فماذا ترسم لتعبر عن حالتك النفسية؟",
+
+"شهر من أشهر العام له ذكرى جميلة معك؟",
+
+"قل حقيقه عنك ؟",
+
+"من اصدق في الحب الولد ولا البنت؟",
+
+"كلمات ماتستغني عنها بسوالفك؟",
+
+"ما هو الشيء الذي تخاف أن تفقده؟",
+
+"أكثر صفة تكرهها في المرأة؟",
+
+"أكثر ماده تحبها دراسياً والسبب؟",
+
+"تسامح شخص وجع قلبك ؟",
+
+"عادة سيئة لا يمكنك الإقلاع عنها، ما هي؟",
+
+"عاجبك وجودك في التلي ولا تتمنى تحذفة.؟",
+
+"شعورك الحالي في جملة؟",
+
+"محادثة ولا مكالمة ؟",
+
+"وش نوع الأفلام اللي تحب تتابعه؟",
+
+"هل أنت مع الخطبة عن حب أم مع الخطبة عن طريق الأهل؟",
+
+"منشن شخص سوالفه حلوه ؟",
+
+"هل تؤمنين بالحب من أول نظرة؟",
+
+"كم من عشرة تحب الاطفال ؟",
+
+"آخر خبر سعيد، متى وصلك؟",
+
+"من الشخص الاقرب لقلبك؟",
+
+"هل ترى نفسك شخص ذو إرادة؟",
+
+"ـ هالفترة أحس اني محتاج ....؟",
+
+"عمرك بكيت على شخص مات في مسلسل ؟",
+
+
+"هل يمكن أن تكره شخص كنت تحبه؟", 
+
+"أغنية عالقة في ذهنك هاليومين؟",
+
+"أكثر مكان تشعر به بالأمان والراحة؟",
+
+"ارسل اخر صورة فـ الالبوم ..",
+
+"جملة من كتاب لا تنساها.؟",
+
+"هل تقدمت للزواج من فتاة من قبل ورفضتك؟",
+
+"أكثر مكان تشعر به بالأمان والراحة؟",
+
+"اكثر شيء تخاف منه ؟",
+
+"اذا غلطت وعرفت انك غلطان تحب تعترف ولا تجحد؟",
+
+"كيف تحد الدولة من الفقر المُتزايد.؟",
+
+"ما هي مواصفات الصديق الحقيقي في نظرك؟",
+
+"أتمنى له كسراً لاجبر له عبارة عميقة هل تمنيتها لأحد.؟",
+
+"مع او ضد : اكثر من يحلون مشاكل الناس ، هم اكثر الناس لديهم مشاكل ؟",
+
+"افضل هديه ممكن تناسبك؟",
+
+"هل تقبل الارتباط بشخص فقير لكنه شديد الجمال؟",
+
+"من طلاسم لهجتكم ؟",
+
+"جربت احد يعطيك بلوك وانت تكتب له ؟",
+
+"أكثر جملة أثرت بك في حياتك؟",
+
+"إذا خيروك أن تُعيد تسمية نفسك فهل تقبل باسمك أم تقوم بتغييره؟",
+
+"هل تؤمن بوجود الصداقة الحقيقية؟",
+
+"هل وقعت في حب شخص من مواقع التواصل الإجتماعي؟",
+
+"كمل : النفس تميل لـ ... ؟",
+
+"جربت شعور احد يحبك بس انت متكدر تحبه؟",
+
+"كلمة تقولها لكل شخص منافق.؟",
+
+"من هو أكثر شخص تفكر به؟",
+
+"هل تجرأ على أن تذكر أكثر صفة تكرهها بك؟",
+
+"حزين ولا مبسوط ؟",
+
+"مع أو ضد لو كان خيراً لبقئ.؟",
+
+"هل ترى نفسك شخص ذو إرادة؟", 
+" وما دليلك على ذلك؟",
+
+"هل تستطيع أن تعيش بدون أصدقاء؟",
+
+"ما هو أغرب موقف مضحك تعرضت له في حياتك؟",
+
+"قوة الاستيعاب عندك من 10",
+
+"اذكر موقف ماتنساه بعمرك؟",
+
+"اغبى كذبه صدقتها بطفولتك؟",
+
+"هل فكرت مسبقًا في الانتقام ممن ظلمك؟",
+
+"كم ساعة تنام في اليوم؟",
+ 
+"مع او ضد : السفر يصلح ما افسده الدهر ؟",
+
+"افضل ايام الاسبوع عندك🔖؟",
+
+"‏- لو خيروك، الزواج بمن تُحب 💍 أو تأخذ مليون دولار💰",
+
+"على نياتكُم تُرزقون منشن تيكن ينطبق علية هذا الشيء.؟",
+
+"هل يمكنك أن تذكر لي معلومة لا يعرفها عنك أحد؟",
+
+"مين المغني المفضل عندك ؟",
+
+"كيف تتعامل مع الشخص المُتطفل ( الفضولي ) ؟",
+
+"موقف غير حياتك؟",
+
+"هل تعتقد أن حبيبتك / حبيبك يفكر بك الآن؟", 
+
+"إذا كان لديك عصا سحرية، ماذا ستفعل بها؟",
+
+"عمرك بكيت على شخص مات في مسلسل ؟",
+
+"كم تحتاج من وقت لتثق بشخص؟",
+
+"إذا تم إيداعك في مشفى المجانين خطئًا، فكيف سوف تثبت لهم أنك عاقل؟",
+
+"حيوانك المفضل؟",
+
+"ما هو أكثر موقف يمكن أن يجعلك سعيد طوال اليوم؟",
+
+"خُلق يجذبك بالناس ؟",
+
+"اشمر مقطع من اغنيه متطلع منراسك؟",
+
+"شعورك لما تشوف صورك وأنت صغير ؟",
+
+"ردة فعلك لمن يتجاهلك بالرد متعمد؟",
+
+"لديك ورقة بيضاء وقلم، ماذا سوف تكتب بها؟",
+
+"كم عدد الصور بجوالك ؟",
+
+"ايهم اصدق نظرة العين او نبرة الصوت ؟",
+
+"جابو طاري شخص تكره عندك تشاركهم ولا تمنعهم.؟",
+
+"شيء عندك اهم من الناس؟",
+
+"الاسود او الأبيض.؟",
+
+"لو حياتك عبارة عن كتاب .. وش بيكون اسمه ؟",
+
+"وش الشيء الي تطلع حرتك فيه و زعلت ؟",
+
+"هل لديك الاستعداد القيام ببعض أمور المنزل لمساعدة الأم أو الزوجة؟",
+
+"هل من الممكن أن تضر شخصاً لمجرد أنك تكرهه؟",
+
+"ما هو أكثر اسم دلع تكرهه؟",
+
+"شكلك يعطي لأي جنسية ؟",
+
+"ماهي الهدية التي تتمنى أن تنتظرك يومًا أمام باب منزلك؟",
+
+"هل سبق وأن رسبتِ في الاختبارات؟",
+
+"إيموجي يعبّر عن مزاجك الحالي؟",
+
+"ا هو أكثر شيء تضيع وقت فراغك به؟", 
+
+"لو حياتك عبارة عن كتاب .. وش بيكون اسمه ؟",
+
+"وش الشيء الي تطلع حرتك فيه و زعلت ؟",
+
+"هل لديك الاستعداد القيام ببعض أمور المنزل لمساعدة الأم أو الزوجة؟",
+
+"هل من الممكن أن تضر شخصاً لمجرد أنك تكرهه؟",
+
+"ما هو أكثر اسم دلع تكرهه؟",
+
+"كم من عشره تعطي حظك ؟",
+
+"لو تم وضعك أما ثلاث خيارات ( المال، الصحة، الرضا) أيهما تختار؟",
+
+"هل يمكنك أن تصف الزواج بكلمة واحدة؟",
+
+"اسم ولد وبنت تحسهم لايقين على بعض ؟",
+
+"احقر الناس هو من ...",
+
+"‏بالنسبه لك ، الطلعه الحلوه يحكمها المكان أو الأشخاص اللي معك .؟",
+
+"كلمة تنرفزك.؟",
+
+"هل يمكنك أن تتولى أمر الأعمال المنزلية أم أنك سوف تفشل في ذلك؟",
+
+"شيء مستحيل انك تاكله ؟",
+
+"ماذا لو عاد مُشتاقاً.؟",
+
+"كلامك للمتنمرين الكترونياً وواقعياً.؟",
+
+"هل يُمكن أن تكذب كذبة كبيرة للخروج من مأزق؟",
+
+"كلمة لشخص بعيد؟",
+
+"اكتب شطر من اغنية او قصيدة جا فـ بالك ؟",
+
+"عندك فوبيا او خوف شديد من شيء معين ؟",
+
+"لو كان هناك أمامك اختيارين أحدهما الزواج والإستقرار معي هنا والآخر السفر والعمل بالخارج، أيهما تختار؟",
+
+"هل لديك فوبيا من شيء معين؟",
+
+"أغمض عينيك ما هو المكان الذي تخيلت نفسك فيه؟",
+
+"أخر رسالة بالواتس جاتك من مين ؟",
+
+"حسيت انك ظلمت شخص.؟",
+
+"هل يمكن لكي أن تكتفي قبل النزول من المنزل بغسيل الوجه فقط دون وضع الميكاب؟",
+
+"هل تؤمن بالحب من النظرة الأولى؟",
+
+"إذا دخلت مُسابقة وكسبت 5 مليون دولار ماذا تفعل بهم؟",
+
+"وش قبيلتك ؟",
+
+"كلمة غريبة من لهجتك ومعناها؟",
+
+"كم من الوقت تستغرق قبل الخروج من المنزل ؟",
+
+"من هي أكثر شخصية عامة مفضلة لديك؟",
+
+"ما هو أكثر شيء يمكنه أن يخطف النوم من عينك؟",
+  "هواية او تجربة كان ودك تستمر و تركتها ؟"
+ 
 ] 
