@@ -10,10 +10,10 @@ let randomkpopx = randomkpop[Math.floor(Math.random() * randomkpop.length)]
 conn.sendFile(m.chat, randomkpopx, '', 'Dasar Kpopers', m)
 })
 .catch(() => {
-conn.reply(m.chat, 'Ocurrio un error, vuelve a intentar, si el fallo continua avisar a mi creador', m)
+conn.reply(m.chat, 'حدث خطأ ، حاول مرة أخرى ، إذا استمر الخطأ في إعلام منشئ المحتوى الخاص بي', m)
 })
 } else {
-conn.reply(m.chat, `Lo sentimos, la busqueda no está disponible. Por favor escribe ${usedPrefix}kpop para ver la lista de busquedas disponibles`, m)
+conn.reply(m.chat, `عذرا، البحث غير متوفر. يرجى الكتابة ${usedPrefix}kpop للاطلاع على قائمة عمليات البحث المتاحة`, m)
 }}
 handler.help = ['kpop'].map(v => v + ' <query>')
 handler.tags = ['image']

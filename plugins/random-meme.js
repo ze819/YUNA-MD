@@ -1,9 +1,37 @@
-/*   Creditos - ig : https://www.instagram.com/fg98._/    */
-import hispamemes from 'hispamemes'
+import axios from "axios"
 let handler = async (m, {command, conn}) => {
-const url = await hispamemes.meme()  
-conn.sendButton(m.chat, `_${command}_`.trim(), author, url, [['🔄 𝑺𝒊𝒈𝒖𝒊𝒆𝒏𝒕𝒆 🔄', `/${command}`]], m)}
+let res = await axios(pickRandom(meme))
+let json = res.data
+let url = json.url
+conn.sendButton(m.chat, `_${command}_`.trim(), wm, url, [['𝙎𝙄𝙂𝙐𝙄𝙀𝙉𝙏𝙀 | 𝙉𝙀𝙓𝙏 🆕', `/${command}`]], m)
+}
 handler.help = ['meme']
 handler.tags = ['random']
-handler.command = /^(meme|memes)$/i
+handler.command = /^(meme)$/i
 export default handler
+
+function pickRandom(list) {
+return list[Math.floor(list.length * Math.random())]}
+
+const meme = [
+"https://meme-api.herokuapp.com/gimme/memesmexico",
+"https://meme-api.herokuapp.com/gimme/mememexico",
+"https://meme-api.herokuapp.com/gimme/memeslatam",
+"https://meme-api.herokuapp.com/gimme/memeslatinoamerica",
+"https://meme-api.herokuapp.com/gimme/latammemes",
+"https://meme-api.herokuapp.com/gimme/memeslatinoamerica",
+"https://meme-api.herokuapp.com/gimme/latammemes",
+"https://meme-api.herokuapp.com/gimme/memesmexico",
+"https://meme-api.herokuapp.com/gimme/mememexico",
+"https://meme-api.herokuapp.com/gimme/memeslatam",
+"https://meme-api.herokuapp.com/gimme/memesmexico",
+"https://meme-api.herokuapp.com/gimme/mememexico",
+"https://meme-api.herokuapp.com/gimme/memeslatam",
+"https://meme-api.herokuapp.com/gimme/memeslatinoamerica",
+"https://meme-api.herokuapp.com/gimme/latammemes",
+"https://meme-api.herokuapp.com/gimme/memeslatinoamerica",
+"https://meme-api.herokuapp.com/gimme/latammemes",
+"https://meme-api.herokuapp.com/gimme/memesmexico",
+"https://meme-api.herokuapp.com/gimme/mememexico",
+"https://meme-api.herokuapp.com/gimme/memeslatam"
+]

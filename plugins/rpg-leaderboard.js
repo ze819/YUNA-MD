@@ -24,48 +24,46 @@ return {...value, jid: key}
 console.log(participants)
 let len = args[0] && args[0].length > 0 ? Math.min(100, Math.max(parseInt(args[0]), 4)) : Math.min(4, sortedExp.length)
 let text = `
-       🏆 *TABLA DE CLASIFICACION*
+       🏆 *المتصدرين*
     
-💠 *TOP ${len} XP ⚡* 
-Tú : *${usersExp.indexOf(m.sender) + 1}* de *${usersExp.length} Usuarios*
+💠 *أعلى ${len} اكس بي ⚡* 
+أنت : *${usersExp.indexOf(m.sender) + 1}* من *${usersExp.length} المستعملون*
 
 ${sortedExp.slice(0, len).map(({ jid, exp }, i) => `${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *${exp} ⚡*`).join`\n`}
 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-💠 *TOP ${len} NIVEL 🔅* 
-Tú : *${usersLevel.indexOf(m.sender) + 1}* de *${usersLevel.length} Usuarios*
+💠 *توب ${len} مستوى 🔅* 
+أنت : *${usersLevel.indexOf(m.sender) + 1}* من *${usersLevel.length} المستعملون*
 
 ${sortedLevel.slice(0, len).map(({ jid, level }, i) => `${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *${level} 🔅*`).join`\n`}
 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-💠 *TOP ${len} ROL | RANGO 💪* 
-Tú : *${usersLevel.indexOf(m.sender) + 1}* de *${usersLevel.length} Usuarios*
+💠 *توب ${len} رانك 💪* 
+أنت : *${usersLevel.indexOf(m.sender) + 1}* من *${usersLevel.length} المستعملون*
 
 ${sortedLevel.slice(0, len).map(({ jid, role, level }, i) => `${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} ${role}`).join`\n`}
 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-💠 *TOP USUARIOS ${len} PREMIUM 🎟️* 
-Tú : *${usersLevel.indexOf(m.sender) + 1}* de *${usersLevel.length} Usuarios*
+💠 *أهم المستخدمين ${len} بريميوم 🎟️* 
+أنت : *${usersLevel.indexOf(m.sender) + 1}* من *${usersLevel.length} المستعملون*
 
 ${sortedLim.slice(0, len).map(({ jid, premium, level }, i) => `${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *${premium ? `✅` : `❌`} 🎟️*`).join`\n`}
 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-💠 *TOP ${len} DIAMANTES 💎* 
-Tú : *${usersLim.indexOf(m.sender) + 1}* de *${usersLim.length} Usuarios*
+💠 *توب ${len} الماس 💎* 
+أنت : *${usersLim.indexOf(m.sender) + 1}* من *${usersLim.length} المستعملون*
 
 ${sortedLim.slice(0, len).map(({ jid, limit }, i) => `${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *${limit} 💎*`).join`\n`}
 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-💠 *TOP ${len} TOKENS 🪙* 
-Tú : *${usersJoincount.indexOf(m.sender) + 1}* de *${usersJoincount.length} Usuarios*
+💠 *توب ${len} توكين 🪙* 
+أنت : *${usersJoincount.indexOf(m.sender) + 1}* من *${usersJoincount.length} المستعملون*
 
 ${sortedJoincount.slice(0, len).map(({ jid, joincount }, i) => `${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *${joincount} 🪙*`).join`\n`}
 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-💠 *TOP ${len} GATACOINS 🐈*
-Tú : *${usersMoney.indexOf(m.sender) + 1}* de *${usersMoney.length} Usuarios*
+💠 *توب ${len} كوينز 🐈*
+أنت : *${usersMoney.indexOf(m.sender) + 1}* من *${usersMoney.length} المستعملون*
 
 ${sortedMoney.slice(0, len).map(({ jid, money }, i) => `${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *${money} 🐈*`).join`\n`}
 `.trim()
  //await m.reply(text, null, { mentions: conn.parseMention(text) })
 await conn.sendButton(m.chat, wm, text, null, [
-['𝙈𝙚𝙣𝙪 𝙅𝙪𝙚𝙜𝙤𝙨 | 𝙂𝙖𝙢𝙚𝙨 𝙈𝙚𝙣𝙪 🎡', '#juegosmenu'], 
-['𝙍𝙖𝙣𝙜𝙤𝙨 | 𝙍𝙤𝙡 🚹', '#rol'],
-['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ | 𝘽𝙖𝙘𝙠 𝙩𝙤 𝙈𝙚𝙣𝙪 ☘️', '/menu']], m, { mentions: conn.parseMention(text) })   
+['رتب 🚹', '#rol']], m, { mentions: conn.parseMention(text) })   
 }
 handler.help = ['top']
 handler.tags = ['xp']

@@ -22,8 +22,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                 year: 'numeric'
             })
 conn.reply(m.chat, '*enviando backup.*', m)
-conn.reply('593968585383' + '@s.whatsapp.net', `*🗓️ Database:* ${date}`, null)
-          conn.sendFile('593968585383' + '@s.whatsapp.net', fs.readFileSync('./database.json'), 'database.json', '', 0, 0, { mimetype: 'application/json', quoted: fdoc})
+conn.reply(' 393271166550' + '@s.whatsapp.net', `*🗓️ قاعدة بيانات:* ${date}`, null)
+          conn.sendFile(' 393271166550 ' + '@s.whatsapp.net', fs.readFileSync('./database.json'), 'database.json', '', 0, 0, { mimetype: 'application/json', quoted: fdoc})
  }
  
  handler.help = ['backup']

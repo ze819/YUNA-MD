@@ -76,41 +76,48 @@ let username = conn.getName(who)
 //let { role } = global.db.data.users[m.sender]
 let name = conn.getName(m.sender)
 let user = global.db.data.users[m.sender]
-    if (!canLevelUp(user.level, user.exp, global.multiplier)) {
-        let { min, xp, max } = xpRange(user.level, global.multiplier)
-        throw `
-╭━━━[ *𝙉𝙄𝙑𝙀𝙇 | 𝙇𝙀𝙑𝙀𝙇* ]━━━━⬣
-┃ *NOMBRE | NAME*
-┃ ${name}
+if (!canLevelUp(user.level, user.exp, global.multiplier)) {
+    let { min, xp, max } = xpRange(user.level, global.multiplier)
+    let teks = `Name: ${name}\n Level: ${user.level}`
+    let str = `
+╭━━━[ *مستوىდ* ]━━━━⬣
+┃დ *الاسم:* ${name} დ
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ *NIVEL:* *${user.level}*
+┃დ *مستوى:* *${user.level}* დ
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ *RANGO:* ${user.role}
+┃დ *رتبة:* ${user.role} დ
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ *XP:* *${user.exp - min}/${xp}*
-╰━━━〔 *𓃠 ${vs}* 〕━━━━━⬣
+┃დ *اكس بي:* *${user.exp - min}/${xp}* დ
+╰━━━〔 *${vs}* 〕━━━━━⬣
 
-*Te falta ${max - user.exp} de XP para subir de nivel*
+*تحتاج إلى ${max - user.exp} XP للارتقاء إلى المستوى التالي*
 `.trim()
+    try {
+        const img = await levelup(teks, user.level)
+        conn.sendFile(m.chat, img, 'levelup.jpg', str, m)
+    } catch (e) {
+        m.reply(str)
     }
+}
+
         
     let before = user.level * 1
     while (canLevelUp(user.level, user.exp, global.multiplier)) user.level++
     if (before !== user.level) {
-        let teks = `Bien hecho! ${conn.getName(m.sender)} Nivel: ${user.level}`
+        let teks = `أحسنت! ${conn.getName(m.sender)} مستوى: ${user.level}`
         let str = `
-╭━━━[ *𝙉𝙄𝙑𝙀𝙇 | 𝙇𝙀𝙑𝙀𝙇* ]━━━━⬣
-┃ *NIVEL ANTERIOR:* *${before}*
+╭━━━[ *مستوىდ* ]━━━━⬣
+┃დ *المستوى السابق:* *${before}*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ *NIVEL ACTUAL:* *${user.level}*
+┃დ *المستوى الحالي:* *${user.level}*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ *RANGO* ${user.role}
+┃დ *رتبة* ${user.role}
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ *FECHA:* *${new Date().toLocaleString('id-ID')}*
-╰━━━〔 *𓃠 ${vs}* 〕━━━━━⬣
+┃დ *تاريخ:* *${new Date().toLocaleString('id-ID')}*
+╰━━━〔 *${vs}* 〕━━━━━⬣
 
-*_Cuanto más interactúes con GataBot-MD, mayor será tu nivel!!_*
-*_Actualiza tú rango con el comando ${usedPrefix}rol!!_*
+*_كل ما تفاعلت يذيد مستواك اكثر_*
+*_قم بتحديث نطاقك باستخدام الأمر ${usedPrefix}rol!!_*
 `.trim()
         try {
             const img = await levelup(teks, user.level)
@@ -123,8 +130,9 @@ let user = global.db.data.users[m.sender]
 
 handler.help = ['levelup']
 handler.tags = ['xp']
-
 handler.command = ['nivel', 'lvl', 'levelup', 'level'] 
+handler.register = true
+handler.messages += 1
 handler.exp = 0
 export default handler
     

@@ -2,8 +2,8 @@ import { sticker } from '../lib/sticker.js'
 let handler = async(m, { conn }) => {
 if (!db.data.chats[m.chat].stickers && m.isGroup) throw 0
 
-let nombre = '🐈 𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿'
-let nombre2 = '𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨' 
+let nombre = 'YUNA BOT '
+let nombre2 = ' 393271166550 ' 
  
 const s = [
 'https://media1.giphy.com/media/2dQ3FMaMFccpi/giphy.gif?cid=ecf05e476azkdvh2cu7b567gbpgyc6q7qd38pklqp12npygv&rid=giphy.gif&ct=g',
@@ -37,11 +37,9 @@ const s = [
 ];  
  
 let stiker = await sticker(null, s[Math.floor(Math.random() * s.length)], nombre, nombre2)
-await delay(5 * 5000)
-if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: wm, body: `h`, mediaType: 2, sourceUrl: nn, thumbnail: imagen1}}}, { quoted: m })
+conn.sendFile(m.chat, stiker, null, { asSticker: true })
 }
-handler.customPrefix = /lindo|linda|cariño|love|corazón|bonita|bonito/i 
+handler.customPrefix = /amor|lindo|linda|cariño|love|corazon|bonita|bonito|querida|querido|:3|3:|vida|cute|<3/i 
 handler.command = new RegExp
 handler.exp = 50
 export default handler
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))

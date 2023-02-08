@@ -24,31 +24,29 @@ let kt = await ke.json()
 let imgr = flaaa.getRandom()
     let user = global.db.data.users[m.sender]
     let timers = (cooldown - (new Date - user.lastadventure))
-if (user.health < 80) return conn.sendButton(m.chat,`${htki} 𝘽𝘼𝙅𝘼 𝙎𝘼𝙇𝙐𝘿 ${htka}`,
-`𝙏𝙐 𝙎𝘼𝙇𝙐𝘿 💔 𝙀𝙎𝙏𝘼 𝙋𝙊𝙍 𝘿𝙀𝘽𝘼𝙅𝙊 𝘿𝙀 *80!!*
-𝙋𝙊𝙍 𝙁𝘼𝙑𝙊𝙍 𝘾𝙐𝙍𝘼𝙏𝙀 𝙋𝙍𝙄𝙈𝙀𝙍𝙊 𝙋𝘼𝙍𝘼 𝘼𝙑𝙀𝙉𝙏𝙐𝙍𝘼𝙍 𝘿𝙀 𝙉𝙐𝙀𝙑𝙊\n\n𝙔𝙊𝙐𝙍 𝙃𝙀𝘼𝙇𝙏𝙃 💔 𝙄𝙎 𝘽𝙀𝙇𝙊𝙒 *80!!*\n𝙋𝙇𝙀𝘼𝙎𝙀 𝙃𝙀𝘼𝙇 𝙁𝙄𝙍𝙎𝙏 𝙏𝙊 𝘼𝘿𝙑𝙀𝙉𝙏𝙐𝙍𝙀 𝘼𝙂𝘼𝙄𝙉`.trim(), imgr + 'MALA SALUD : BAD HEALTH', [
-[`❤️ 𝘾𝙐𝙍𝘼𝙍𝙈𝙀 | 𝙃𝙀𝘼𝙇 𝙈𝙀`, `${usedPrefix}heal`],
-[`🎒 𝙄𝙉𝙑𝙀𝙉𝙏𝘼𝙍𝙄𝙊 | 𝙄𝙉𝙑𝙀𝙉𝙏𝙊𝙍𝙔`, `${usedPrefix}inventory`]], fkontak, m)
+if (user.health < 80) return conn.sendButton(m.chat,`${htki}   ${htka}`,
+` \n   *80!!*\n      `.trim(), imgr + 'MALA SALUD : BAD HEALTH', [
+[`  |  `, `${usedPrefix}heal`],
+[`  |  `, `${usedPrefix}inventory`]], fkontak, m)
     
-if (new Date - user.lastadventure <= cooldown) return conn.sendButton(m.chat, `${htki} 𝘿𝙀𝙎𝘾𝘼𝙉𝙎𝘼𝙉𝘿𝙊 ${htka}`,
-`𝙔𝘼 𝘼𝙑𝙀𝙉𝙏𝙐𝙍𝘼𝙎𝙏𝙀!! 𝙋𝙊𝙍 𝙁𝘼𝙑𝙊𝙍 𝙀𝙎𝙋𝙀𝙍𝘼 𝙃𝘼𝙎𝙏𝘼 𝙌𝙐𝙀 𝙏𝙀𝙍𝙈𝙄𝙉𝙀 𝙀𝙇 𝙏𝙄𝙀𝙈𝙋𝙊 𝘿𝙀 𝘿𝙀𝙎𝘾𝘼𝙉𝙎𝙊
-
-𝙔𝙊𝙐 𝘼𝙇𝙍𝙀𝘼𝘿𝙔 𝘼𝘿𝙑𝙀𝙉𝙏𝙐𝙍𝙀𝘿!! 𝙋𝙇𝙀𝘼𝙎𝙀 𝙒𝘼𝙄𝙏 𝙐𝙉𝙏𝙄𝙇 𝙏𝙃𝙀 𝘽𝙍𝙀𝘼𝙆 𝙏𝙄𝙈𝙀 𝙄𝙎 𝙊𝙑𝙀𝙍 
-⏱️ ${timers.toTimeString()}`.trim(), imgr + 'DESCANSANDO : RESTING', [
-[`🎒 𝙄𝙉𝙑𝙀𝙉𝙏𝘼𝙍𝙄𝙊 | 𝙄𝙉𝙑𝙀𝙉𝙏𝙊𝙍𝙔`, `${usedPrefix}inventory`],
-[`🔔 𝙍𝙀𝘾𝙇𝘼𝙈𝙊 𝘿𝙄𝘼𝙍𝙄𝙊 | 𝘿𝘼𝙄𝙇𝙔`, `${usedPrefix}daily`]], fkontak, m) 
+if (new Date - user.lastadventure <= cooldown) return conn.sendButton(m.chat, `${htki}  ${htka}`,
+`
+   !!       
+ ${timers.toTimeString()}`.trim(), imgr + ' : ', [
+[`  | `, `${usedPrefix}inventory`],
+[` | `, `${usedPrefix}daily`]], fkontak, m) 
     
     const rewards = reward(user)
-    let text = `🛫 𝙀𝙎𝙏𝘼𝙎 𝘼𝙑𝙀𝙉𝙏𝙐𝙍𝘼𝙉𝘿𝙊 𝙀𝙉 *» ${kt[1][0].name}*
+    let text = `    *� ${kt[1][0].name}*
 
 ${cmenut}
-${cmenub} *ID :* ${kt[1][0].id}
-${cmenub} *CIUDAD | CITY :* ${kt[1][0].capitalCity}
-${cmenub} *LONGITUD | LENGTH :* ${kt[1][0].longitude}
-${cmenub} *LATITUD | LATITUDE :* ${kt[1][0].latitude}
+${cmenub} * :* ${kt[1][0].id}
+${cmenub} * :* ${kt[1][0].capitalCity}
+${cmenub} * :* ${kt[1][0].longitude}
+${cmenub} * :* ${kt[1][0].latitude}
 ${cmenuf}
 
-🏞️ 𝘼𝙑𝙀𝙉𝙏𝙐𝙍𝘼 𝙁𝙄𝙉𝘼𝙇𝙄𝙕𝘼𝘿𝘼 : 𝘼𝘿𝙑𝙀𝙉𝙏𝙐𝙍𝙀 𝙁𝙄𝙉𝙄𝙎𝙃𝙀𝘿
+  
 ${cmenua}`
     
     for (const lost in rewards.lost) if (user[lost]) {
@@ -56,23 +54,23 @@ ${cmenua}`
         user[lost] -= total * 1
         if (total) text += `\n${global.rpg.emoticon(lost)} ${total}`
     }
-    text += '\n\n✨ 𝙍𝙀𝘾𝙊𝙈𝙋𝙀𝙉𝙎𝘼𝙎 𝘿𝙀 𝙇𝘼 𝘼𝙑𝙀𝙉𝙏𝙐𝙍𝘼\n✨ 𝘼𝘿𝙑𝙀𝙉𝙏𝙐𝙍𝙀 𝙍𝙀𝙒𝘼𝙍𝘿𝙎'
+    text += '\n\n  '
     for (const rewardItem in rewards.reward) if (rewardItem in user) {
         const total = rewards.reward[rewardItem].getRandom()
         user[rewardItem] += total * 1
-        if (total) text += `\n» ${global.rpg.emoticon(rewardItem)} ${total}`
+        if (total) text += `\n� ${global.rpg.emoticon(rewardItem)} ${total}`
     }
     conn.sendButton(m.chat, 
-     `${htki} 𝘼𝙑𝙀𝙉𝙏𝙐𝙍𝘼 ${htka}`, 
+     `${htki}   ${htka}`, 
      text.trim(), `https://static-maps.yandex.ru/1.x/?lang=id-ID&ll=${kt[1][0].longitude},${kt[1][0].latitude}&z=12&l=map&size=600,300`, [
-[`🎒 𝙄𝙉𝙑𝙀𝙉𝙏𝘼𝙍𝙄𝙊 | 𝙄𝙉𝙑𝙀𝙉𝙏𝙊𝙍𝙔`, `${usedPrefix}inventory`],
-[`🔔 𝙍𝙀𝘾𝙇𝘼𝙈𝙊 𝘿𝙄𝘼𝙍𝙄𝙊 | 𝘿𝘼𝙄𝙇𝙔`, `${usedPrefix}daily`]
+[`  `, `${usedPrefix}inventory`],
+[`  `, `${usedPrefix}daily`]
 ], fkontak, m)
     user.lastadventure = new Date * 1
 }
 handler.help = ['adventure']
 handler.tags = ['rpg']
-handler.command = /^(adventure|adv|aventura|aventurar)$/i
+handler.command = /^(adventure|adv||aventurar)$/i
 
 handler.cooldown = cooldown
 handler.disabled = false

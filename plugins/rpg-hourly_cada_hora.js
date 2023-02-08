@@ -30,7 +30,7 @@ const recompensas = {
 }
 
 let time = user.lasthourly + 3600000 //1 Hora //3600000
-if (new Date - user.lasthourly < 3600000) return await conn.sendButton(m.chat, `𝙔𝘼 𝙍𝙀𝘾𝙄𝘽𝙄𝙎𝙏𝙀 𝙏𝙐 𝙀𝙉𝙏𝙀𝙂𝘼 𝘿𝙀 𝘾𝘼𝘿𝘼 𝙃𝙊𝙍𝘼 ♻️\n𝙑𝙐𝙀𝙇𝙑𝙀 𝙀𝙉 *${msToTime(time - new Date())}* 𝙋𝘼𝙍𝘼 𝙍𝙀𝘾𝙄𝘽𝙄𝙍 𝙊𝙏𝙍𝘼 𝙀𝙉𝙏𝙍𝙀𝙂𝘼\n\n𝙔𝙊𝙐 𝘼𝙇𝙍𝙀𝘼𝘿𝙔 𝙍𝙀𝘾𝙀𝙄𝙑𝙀𝘿 𝙔𝙊𝙐𝙍 𝙃𝙊𝙐𝙍𝙇𝙔 𝘿𝙀𝙇𝙄𝙑𝙀𝙍𝙔 ♻️\n𝘾𝙊𝙈𝙀 𝘽𝘼𝘾𝙆 𝙄𝙉 *${msToTime(time - new Date())}* 𝙏𝙊 𝙍𝙀𝘾𝙀𝙄𝙑𝙀 𝘼𝙉𝙊𝙏𝙃𝙀𝙍 𝘿𝙀𝙇𝙄𝙑𝙀𝙍𝙔`, wm, null, [['𝗠 𝗘 𝗡 𝗨 ☘️', '/menu']], fkontak, m)
+if (new Date - user.lasthourly < 3600000) return await conn.sendButton(m.chat, ` لقد استلمت بالفعل التسليم بالساعة ♻️\nعد في *${msToTime(time - new Date())}* لاستلام توصيل آخر `, wm, null, [['الأوامر ☘️', '/menu']], fkontak, m)
 let texto = ''
 for (let reward of Object.keys(recompensas)) {
     if (!(reward in user)) continue
@@ -38,17 +38,16 @@ for (let reward of Object.keys(recompensas)) {
 texto += `*+${recompensas[reward]}* ${global.rpgshop.emoticon(reward)}\n`}
 let text = `
 ╭━━🕐━🕑━🕒━━⬣
-┃ ♻️ 𝙀𝙉𝙏𝙍𝙀𝙂𝘼 𝘾𝘼𝘿𝘼 𝙃𝙊𝙍𝘼!!
-┃ ♻️ 𝙃𝙊𝙐𝙍𝙇𝙔 𝘿𝙀𝙇𝙄𝙑𝙀𝙍𝙔!!
-┃ *${premium ? '🎟️ Recompensa Premium' : '🆓 Recompensa Gratis'}*
+┃ ♻️ التسليم بالساعة!!
+┃ *${premium ? '🎟️ مكافأة مميزة' : '🆓 مكافأة مجانية'}*
 ╰━━🕕━🕔━🕓━━⬣`
 
-await conn.sendButton(m.chat, text, texto + `\n\n🎟️ 𝗣 𝗥 𝗘 𝗠 𝗜 𝗨 𝗠 ⇢ ${premium ? '✅' : '❌'}\n${wm}`, img5, [['🎁 𝙍𝙀𝙂𝘼𝙇𝙊 | 𝘾𝙇𝘼𝙄𝙈 🎁', '/claim'], ['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ | 𝘽𝙖𝙘𝙠 𝙩𝙤 𝙈𝙚𝙣𝙪 ☘️', '/menu']], m, dos.getRandom())  
+await conn.sendButton(m.chat, text, texto + `\n\n🎟️مميز ⇢ ${premium ? '✅' : '❌'}\n${wm}`, img5, [['🎁  يوميه 🎁', '/يوميه'], ['اسبوعبه ☘️', '/اسبوعيه']], m, dos.getRandom())  
 user.lasthourly = new Date * 1
 }
 handler.help = ['hourly']
 handler.tags = ['xp']
-handler.command = ['hourly', 'entega', 'cadahora', 'recibirentrega'] 
+handler.command = ['hourly', 'توصيل', 'ساعه', 'recibirentrega'] 
 handler.level = 4 
 export default handler
 

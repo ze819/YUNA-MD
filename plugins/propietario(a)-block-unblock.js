@@ -28,7 +28,7 @@ if (res[0]) conn.reply(m.chat, `*Éxito ${command} ${res ? `${res.map(v => '@' +
 }
 handler.help = ["block", "unblock"]
 handler.tags = ["owner"]
-handler.command = /^(block|unblock|bloquear|desbloquear)$/i
+handler.command = /^(block|unblock|حظر|desbloquear)$/i
 handler.owner = true
  
 export default handler

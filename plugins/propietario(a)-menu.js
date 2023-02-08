@@ -102,6 +102,7 @@ let menuB = `╭┄〔 *${wm}* 〕┄⊱
 ∘ _${usedPrefix}deldiamantes *@tag*_
 ∘ _${usedPrefix}reiniciar | restart_
 ∘ _${usedPrefix}ctualizar | update_
+setppbot
 ∘ _${usedPrefix}addprem | +prem *@tag*_
 ∘ _${usedPrefix}delprem | -prem *@tag*_
 ∘ _${usedPrefix}listapremium | listprem_

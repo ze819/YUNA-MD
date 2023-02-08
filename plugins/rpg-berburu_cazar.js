@@ -70,7 +70,7 @@ let handler = async (m, { conn }) => {
 		let ar12 = `${['🪚','⛏️','🧨','💣','🔫','🔪','🗡️','🏹','🦾','🥊','🧹','🔨','🛻'].getRandom()}`
 
 let hsl = `
-*✧ Resultados de la caza ${conn.getName(m.sender)} ✧*
+*✧ نتائج الصيد ${conn.getName(m.sender)} ✧*
 
  *🐂 ${ar1} ${anti1}*			 *🐃 ${ar7} ${anti7}*
  *🐅 ${ar2} ${anti2}*			 *🐮 ${ar8} ${anti8}*
@@ -93,28 +93,28 @@ let hsl = `
 		global.db.data.users[m.sender].ayam += rbrb12
 	
 let time = global.db.data.users[m.sender].lastberburu + 2700000 //45 Minutos
-if (new Date - global.db.data.users[m.sender].lastberburu < 2700000) return conn.sendButton(m.chat, `𝙋𝙊𝙍 𝙁𝘼𝙑𝙊𝙍 𝘿𝙀𝙎𝘾𝘼𝙉𝙎𝘼 𝙐𝙉 𝙈𝙊𝙈𝙀𝙉𝙏𝙊 𝙋𝘼𝙍𝘼 𝙇𝙐𝙀𝙂𝙊 𝙎𝙀𝙂𝙐𝙄𝙍 𝘾𝘼𝙕𝘼𝙉𝘿𝙊\n\n𝙋𝙇𝙀𝘼𝙎𝙀 𝙍𝙀𝙎𝙏 𝘼 𝙈𝙊𝙈𝙀𝙉𝙏 𝘼𝙉𝘿 𝙏𝙃𝙀𝙉 𝘾𝙊𝙉𝙏𝙄𝙉𝙐𝙀 𝙃𝙐𝙉𝙏𝙄𝙉𝙂`, `⫹⫺ 𝙏𝙄𝙀𝙈𝙋𝙊 : 𝙏𝙄𝙈𝙀 ${clockString(time - new Date())}\n${wm}`, null, [
-['🏞️ 𝘼𝙣𝙞𝙢𝙖𝙡𝙚𝙨 𝘾𝙖𝙥𝙩𝙪𝙧𝙖𝙙𝙤𝙨 ', '.kandang'],
-[`🎒 𝙄𝙣𝙫𝙚𝙣𝙩𝙖𝙧𝙞𝙤 | 𝙄𝙣𝙫𝙚𝙣𝙩𝙤𝙧𝙮`, `.inventario`]], fkontak, m)	
+if (new Date - global.db.data.users[m.sender].lastberburu < 2700000) return conn.sendButton(m.chat, `يرجى الراحة لحظة ثم مواصلة الصيد`, `⫹⫺ الوقت ${clockString(time - new Date())}\n${wm}`, null, [
+['🏞️ أنيماليس  ', '.kandang'],
+[`🎒  مخزن`, `.inventario`]], fkontak, m)	
 
 setTimeout(() => {
-conn.sendHydrated(m.chat, hsl, wm, null, md, `𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿`, null, null, [
+conn.sendHydrated(m.chat, hsl, wm, null, md, `YUNA BOT`, null, null, [
 [null, null]], null)}, 20000)
 	        
 setTimeout(() => {
-conn.sendHydrated(m.chat, `${conn.getName(m.sender)} *${['OBJETIVO FIJADO 🎯','Carnada en Marcha 🍫 🍇 🍖','ANIMALES DETECTADOS!! 🐂 🐅 🐘 🐼','ANIMALES DETECTADOS!! 🐖 🐃 🐮 🐒'].getRandom()}*`, wm, null, null, null, null, null, [
+conn.sendHydrated(m.chat, `${conn.getName(m.sender)} *${['مجموعة الأهداف 🎯','الطعم أثناء التنقل 🍫 🍇 🍖','الحيوانات المكتشفة!! 🐂 🐅 🐘 🐼','الحيوانات المكتشفة!! 🐖 🐃 🐮 🐒'].getRandom()}*`, wm, null, null, null, null, null, [
 [null, null]], null)}, 18000)
 
 setTimeout(() => {
-conn.sendHydrated(m.chat, `${conn.getName(m.sender)} *${['Armas lista para la Caza!!','Probando Armas 🔫 💣 🪓 🏹','CARROS PARA LA CAZA!! 🚗 🏍️ 🚜','TIEMPO BUENO PARA LA CAZA 🧤'].getRandom()}*`, wm, null, null, null, null, null, [
+conn.sendHydrated(m.chat, `${conn.getName(m.sender)} *${['أسلحة جاهزة للصيد!!','اختبار الأسلحة 🔫 💣 🪓 🏹','عربات الصيد!! 🚗 🏍️ 🚜','الوقت المناسب للصيد 🧤'].getRandom()}*`, wm, null, null, null, null, null, [
 [null, null]], null)}, 15000)
 
 setTimeout(() => {
-conn.sendHydrated(m.chat, `${conn.getName(m.sender)} *${['Looking for hunting implements...','Getting everything ready for the hunt!!','Establishing Hunting Place...','PREPARING HUNTING PLACE!!'].getRandom()}*`, wm, null, null, null, null, null, [
+conn.sendHydrated(m.chat, `${conn.getName(m.sender)} *${['تبحث عن أدوات الصيد...','الحصول على كل شيء جاهز للصيد!!','إنشاء مكان للصيد...','إعداد مكان الصيد!!'].getRandom()}*`, wm, null, null, null, null, null, [
 [null, null]], null)}, 14000)
 
 setTimeout(() => {
-conn.sendHydrated(m.chat, `${conn.getName(m.sender)} *${['Buscando implementos de caza...','Alistando todo para la caza!!','Estableciendo Lugar de la Caza...','PREPARANDO LUGAR DE CAZA!!'].getRandom()}*`, wm, null, null, null, null, null, [
+conn.sendHydrated(m.chat, `${conn.getName(m.sender)} *${['تبحث عن أدوات الصيد...','تجهيز كل شيء للصيد!!','إنشاء مكان للصيد...','إعداد مكان الصيد!!'].getRandom()}*`, wm, null, null, null, null, null, [
 [null, null]], null)}, 0)	
 user.lastberburu = new Date * 1	
 //} else conn.sendButton(m.chat, `𝙋𝙊𝙍 𝙁𝘼𝙑𝙊𝙍 𝘿𝙀𝙎𝘾𝘼𝙉𝙎𝘼 𝙐𝙉 𝙈𝙊𝙈𝙀𝙉𝙏𝙊 𝙋𝘼𝙍𝘼 𝙇𝙐𝙀𝙂𝙊 𝙎𝙀𝙂𝙐𝙄𝙍 𝘾𝘼𝙕𝘼𝙉𝘿𝙊\n\n𝙋𝙇𝙀𝘼𝙎𝙀 𝙍𝙀𝙎𝙏 𝘼 𝙈𝙊𝙈𝙀𝙉𝙏 𝘼𝙉𝘿 𝙏𝙃𝙀𝙉 𝘾𝙊𝙉𝙏𝙄𝙉𝙐𝙀 𝙃𝙐𝙉𝙏𝙄𝙉𝙂`, `⫹⫺ 𝙏𝙄𝙀𝙈𝙋𝙊 : 𝙏𝙄𝙈𝙀 ${msToTime(time - new Date())}\n${wm}`, null, [
@@ -124,7 +124,7 @@ user.lastberburu = new Date * 1
 }
 handler.help = ['berburu']
 handler.tags = ['rpg']
-handler.command = /^(hunt|berburu|caza(r)?)$/i
+handler.command = /^(hunt|صيد|caza(r)?)$/i
 //handler.group = true
 export default handler
 

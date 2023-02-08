@@ -1,17 +1,20 @@
-import fetch from 'node-fetch'
+/*import fetch from 'node-fetch';
+
 let handler = async (m, { conn, command }) => {
-if (!db.data.chats[m.chat].modohorny && m.isGroup) throw '[ ⚠️ ] Los comandos +18 estan desactivados en este grupo, si es administrador de este grupo y desea activarlos escriba #enable nsfw'
-let url = pies[Math.floor(Math.random() * pies.length)]
-conn.sendButton(m.chat, `🥵 ♥ PIES ♥  🥵`, author, url, [['🔄 𝐬𝐢𝐠𝐮𝐢𝐞𝐧𝐭𝐞 🔄', `/${command}`]], m)
+  if (!global.db.data.chats[m.chat].modohorny && m.isGroup) throw 'اك';
+  let url1 = global.pies[Math.floor(Math.random() * global.pies.length)];
+  let url2 = global.pies[Math.floor(Math.random() * global.pies.length)];
+  conn.sendPhoto({chat_id: m.chat, photo: url1});
+  conn.sendPhoto({chat_id: m.chat, photo: url2});
 }
-handler.help = ['pies']
-handler.tags = ['internet']
-handler.command = /^(pies)$/
-handler.exp = 50
-handler.level = 5
-export default handler
 
+handler.help = ['pies'];
+handler.tags = ['internet'];
+handler.command = /^(pies)$/;
+handler.exp = 50;
+handler.level = 5;
 
+export default handler;
 global.pies = [
 "https://i.pinimg.com/originals/d9/e0/d4/d9e0d435743e9db03cf6b1b01627830f.jpg",
 "https://i.pinimg.com/474x/ef/75/1e/ef751e617f97136f3da8d841e967449d.jpg",
@@ -25,3 +28,4 @@ global.pies = [
 "https://i.pinimg.com/236x/04/0c/6a/040c6a8be34d7720a13a35660b38206e.jpg",
 "https://d9i9nmwzijaw9.cloudfront.net/825/468/062/-339996984-1tfbdp6-75i10fd292aij0p/original/avatar.jpg",
 ]
+*/
