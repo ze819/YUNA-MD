@@ -7,9 +7,9 @@ let pesan = args.join` `
 let oi = `${lenguajeGB.smsAddB5()} _${pesan}_`
 
 let textoA = 
-`*⊱ ──── 《.⋅ 🐈 ⋅.》 ──── ⊰*
-ෆ ${lenguajeGB.smsAddB3()}
-ෆ ${oi}
+`*ا⊱ ──── 《.⋅  •『 𝒚𝒖𝒏𝒂 𝒃𝒐𝒕 』•  ⋅.》 ──── ⊰ا*
+ ${lenguajeGB.smsAddB3()}
+ ${oi}
 *⊱ ──── 《.⋅ ${vs} ⋅.》 ──── ⊰*`
 
 let textoB = 
@@ -18,6 +18,6 @@ let textoB =
 ⛔ ${lenguajeGB.smsAddB4()} ⛔`.trim()
 await conn.sendButton(m.chat, textoA, textoB, pp, [[lenguajeGB.smsConMenu(), `.menu`]], m, { mentions: [...groupAdmins.map(v => v.id), owner] })
 }
-handler.command = /^(admins|@admins|dmins)$/i
+handler.command = /^(admins|ادمن|dmins)$/i
 handler.group = true
 export default handler

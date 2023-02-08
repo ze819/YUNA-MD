@@ -44,6 +44,7 @@ rows: [
 {title: lenguajeGB['smsLista12'](), rowId: `${usedPrefix}listprem`},
 {title: lenguajeGB['smsLista13'](), rowId: `${usedPrefix}pase premium`},
 {title: lenguajeGB['smsLista14'](), rowId: `${usedPrefix}inventario 3`},
+{title: "🌐 بوت يجيب لك مصاري 🌐", rowId: `${usedPrefix}MC-SERVER`},
 {title: lenguajeGB['smsLista15'](), rowId: `${usedPrefix}rpgmenu`},
 {title: lenguajeGB['smsLista16'](), rowId: `${usedPrefix}buy`},
 {title: lenguajeGB['smsLista17'](), rowId: `${usedPrefix}inventory`, description: '\n'}
@@ -75,32 +76,32 @@ rows: [
 ]}]
 
 const listMessage = {
-text: `*╭─────────────────✤*\n*│* *${ucapan()}*\n*│* 🌐 *${name}* ${user.registered === true ? '*' + 'ͧͧͧͦꙶͣͤ✓ᚲᴳᴮ' + '*' : ''} 🌐\n*│*
-╭━〔 *${wm}* 〕━⬣
-┃✜ *${lenguajeGB['smsTime']()}*	    
-┃➺ _${time}_ 
-┃   ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃✜ *${lenguajeGB['smsUptime']()}* 
-┃➺ _${uptime}_
-┃   ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃✜ *${lenguajeGB['smsVersion']()}*
-┃➺ _${vs}_
-┃   ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃✜ *${lenguajeGB['smsTotalUsers']()}*
-┃➺ _${Object.keys(global.db.data.users).length}_ 
-┃   ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃✜ *${lenguajeGB['smsMode']()}*
-┃➺ _${global.opts['self'] ? `*${lenguajeGB['smsModePrivate']()}*` : `*${lenguajeGB['smsModePublic']()}*`}_
-┃   ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃✜ *${lenguajeGB['smsBanChats']()}*
-┃➺ _${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}_ 
-┃   ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃✜ *${lenguajeGB['smsBanUsers']()}*
-┃➺ _${Object.entries(global.db.data.users).filter(user => user[1].banned).length}_
-╰━━━━━━━━━━━━━━━━⬣
-*» Premium ➺ ${user.premiumTime > 0 ? '✅' : '❌'}* ${(conn.user.jid == global.conn.user.jid ? '' : `\n» *Sub bot del:* wa.me/${global.conn.user.jid.split`@`[0]}`) || ''}
-*» ${lenguajeGB['smsPareja']()} ➺ ${pareja ? `${name} 💕 ${conn.getName(pareja)}` : `🛐 ${lenguajeGB['smsResultPareja']()}`}*`,
-footer: `*↓ TRUSTED LINK* ✅
+text: `*╔═══❖•ೋ° °ೋ•❖═══╗*\n*╠დ* *${ucapan()}*\n*╠დ* 🌐 *${name}* ${user.registered === true ? '*' + 'ͧͧͧͦꙶͣͤ✓ᚲʏʙ' + '*' : ''} 🌐\n*╚═══❖•ೋ° °ೋ•❖═══╝*
+╔═════๑۩${wm}۩๑═════●
+╠დ➺ *${lenguajeGB['smsTime']()}*	    
+╠დ➺ ${time}   
+║დ   ======== • ✠ • ========
+╠დ➺ *${lenguajeGB['smsUptime']()}* 
+╠დ➺ ${uptime}
+║დ   ======== • ✠ • ========
+╠დ➺ *${lenguajeGB['smsVersion']()}*
+╠დ➺ ${vs} 
+║დ  ======== • ✠ • ========
+╠დ➺ *${lenguajeGB['smsTotalUsers']()}*
+╠დ➺ ${Object.keys(global.db.data.users).length} 
+║დ   ======== • ✠ • ========
+╠დ➺ *${lenguajeGB['smsMode']()}*
+╠დ➺ ${global.opts['self'] ? `*${lenguajeGB['smsModePrivate']()}*` : `*${lenguajeGB['smsModePublic']()}*`}
+║დ   ======== • ✠ • ========
+╠დ➺ *${lenguajeGB['smsBanChats']()}*
+╠დ➺ ${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length} 
+║დ   ======== • ✠ • ======== 
+╠დ➺ *${lenguajeGB['smsBanUsers']()}*
+╠დ➺ ${Object.entries(global.db.data.users).filter(user => user[1].banned).length}
+╚დ════════۩${vs} ۩════════დ
+*» بريميوم ➺ ${user.premiumTime > 0 ? '✅' : '❌'}* ${(conn.user.jid == global.conn.user.jid ? '' : `\n» أنا روبوت فرعي ل: wa.me/${global.conn.user.jid.split`@`[0]}`) || ''}
+*» ${lenguajeGB['smsPareja']()} ➺ ${pareja ? `${name} 💕 ${conn.getName(pareja)}` : `👑	${lenguajeGB['smsResultPareja']()}`}*`,
+footer: `*↓ رابط موثوق* ✅
 ${readMore}${redesMenu.getRandom()}`, //${name} ${ucapan()} //lenguajeGB['smsMenu']()
 title: null,
 buttonText: `${lenguajeGB['smsListaMenu']()}`, 
@@ -114,7 +115,7 @@ console.log(e)
 }}
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')
 handler.tags = ['group', 'owner']
-handler.command = /^(menu|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|m|\?)$/i
+handler.command = /^(menu|menú|memu|memú|help|info|الاوامر|2help|menu1.2|ayuda|commands|commandos|m|\?)$/i
 //handler.register = true
 handler.exp = 50
 export default handler

@@ -24,13 +24,13 @@ let text =
 ⇢ ${lenguajeGB['smsGI9']()}
 ${listAdmin}
 
-*《 - - - - - - - 𓃠 ${vs} - - - - - - - 》*
+*《 - - - - - - - ${vs} - - - - - - - 》*
 `.trim()
   
 await conn.sendButton(m.chat, wm, text, pp, [[lenguajeGB.smsGI10(), '.on'], [lenguajeGB.smsConMenu(), '/menu']], m, { mentions: [...groupAdmins.map(v => v.id), owner] })
 }
 handler.help = ['infogrup']
 handler.tags = ['group']
-handler.command = /^(infogrupo|gro?upinfo|info(gro?up|gc))$/i
+handler.command = /^(infogrupo|grin|قروبات|قروبات_يونا|قروبات يونا|gro?upinfo|info(gro?up|gc))$/i
 handler.group = true
 export default handler

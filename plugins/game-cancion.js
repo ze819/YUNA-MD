@@ -6,7 +6,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 conn.tebaklagu = conn.tebaklagu ? conn.tebaklagu : {}
 let id = m.chat
 if (id in conn.tebaklagu) {
-conn.reply(m.chat, 'Todavía hay canciones sin respuesta en este chat.', conn.tebaklagu[id][0])
+conn.reply(m.chat, 'لا تزال هناك أغان لم يتم الرد عليها في هذه الدردشة.', conn.tebaklagu[id][0])
 throw false
 } //5LTV57azwaid7dXfz5fzJu
 let res = await fetchJson(`https://fatiharridho.github.io/tebaklagu.json`)
@@ -16,16 +16,16 @@ let json = res[Math.floor(Math.random() * res.length)]
 //let result = await res.json()
 //let json = result.result
 let caption = `
-ADIVINA EL TITULO DE LA CANCION
-Tiempo ${(timeout / 1000).toFixed(2)} segundos
-Escribe *${usedPrefix}pista* Para obtener una pista
-Premio: ${poin} XP
+تخمين عنوان الأغنية
+وقت ${(timeout / 1000).toFixed(2)} الثواني
+يكتب *${usedPrefix}pista* للحصول على فكرة
+جائزة: ${poin} XP
 RESPONDE A ESTE MENSAJE CON LAS RESPUESTAS!`.trim()
 conn.tebaklagu[id] = [
 await m.reply(caption),
 json, poin,
 setTimeout(() => {
-if (conn.tebaklagu[id]) conn.reply(m.chat, `Se acabó el tiempo!\nLa respuesta es ${json.jawaban}`, conn.tebaklagu[id][0])
+if (conn.tebaklagu[id]) conn.reply(m.chat, `انتهى الوقت!\nالجواب هو ${json.jawaban}`, conn.tebaklagu[id][0])
 delete conn.tebaklagu[id]
 }, timeout)
 ]

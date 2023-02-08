@@ -11,9 +11,9 @@ const { reaction, antifake, antiTwitter, antiInstagram, antiFacebook, antiTelegr
 let text = 
 `╭━[ 𝘾𝙊𝙉𝙁𝙄𝙂𝙐𝙍𝘼𝘾𝙄𝙊𝙉 ]━⬣
 ┃
-┃・ 𝙒𝙀𝙇𝘾𝙊𝙈𝙀 ${welcome ? '✅' : '❌'}
-┃・ 𝘿𝙀𝙏𝙀𝘾𝙏 ${detect ? '✅' : '❌'} 
-┃・ 𝘼𝙐𝙏𝙊𝙇𝙀𝙑𝙀𝙇𝙐𝙋 ${global.db.data.users[m.sender].autolevelup ? '✅' : '❌'}
+┃・ ترحيب ${welcome ? '✅' : '❌'}
+┃・ مسح ${detect ? '✅' : '❌'} 
+┃・ مستوى تلقائي${global.db.data.users[m.sender].autolevelup ? '✅' : '❌'}
 ┃・ 𝙁𝙐𝙉𝘾𝙄𝙊𝙉 𝘼𝙉𝘼𝘿𝙄𝙍 𝙔 𝙎𝘼𝘾𝘼𝙍 ${global.db.data.settings[conn.user.jid].restrict ? '✅' : '❌'}
 ┃・ 𝙁𝙐𝙉𝘾𝙄𝙊𝙉 𝘽𝙊𝙏 𝙏𝙀𝙈𝙋𝙊𝙍𝘼𝙇 ${global.db.data.settings[conn.user.jid].temporal ? '✅' : '❌'}
 ┃・ 𝙎𝙏𝙄𝘾𝙆𝙀𝙍𝙎 ${stickers ? '✅' : '❌'}
@@ -45,4 +45,5 @@ handler.help = ['infogrup']
 handler.tags = ['group']
 handler.command = /^(configuración|settings|setting|confugurar|configuracion|vergrupo|gruporesumen|resumen)$/i
 handler.group = true
-export default handler*/
+export default handler
+*/

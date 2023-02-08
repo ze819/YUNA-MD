@@ -70,24 +70,20 @@ let fsizedoc = '1'.repeat(10)
 let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: wm, body: '👋 ' + username, mediaUrl: ig, description: 'Hola', previewType: 'PHOTO', thumbnail: await(await fetch(gataMenu.getRandom())).buffer(), sourceUrl: redesMenu.getRandom() }}}
 
 let menuA = `✨ ${lenguajeGB['smsConfi2']()} *${username}*`.trim()
-let menuB = `╭┄〔 *${wm}* 〕┄⊱
-┊დ *${week}, ${date}*
-┊დ *${lenguajeGB['smsBotonM4']()} » ${Object.keys(global.db.data.users).length}* 
-┊
-┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
-┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
-┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
-
-⠇ ${lenguajeGB['smsTex14']()} ⛺
-∘ _${usedPrefix}logos *efecto texto*_
-∘ _${usedPrefix}simpcard *@tag*_
-∘ _${usedPrefix}hornycard *@tag*_
-∘ _${usedPrefix}lolice *@tag*_
-∘ _${usedPrefix}ytcomment *texto*_
-∘ _${usedPrefix}itssostupid_
-∘ _${usedPrefix}pixelar_
-∘ _${usedPrefix}blur_
+let menuB = ` تزكر قبل كل أمر يجب أن تستخدم ${usedPrefix}
+*┇⊛* ${lenguajeGB['smsTex14']()} ⛺
+*┇⊛هذا الأمر يصنع لك شعار*
+*┇اكتب : logo او logos*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يقوم بإرسال لك صوره بروفيل منقطعة*
+*┇اكتب : pixelar او منقط*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يصنع لك تعلق YouTube*
+*┇اكتب : yb*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر ماله فايده يخليك غبي فقط*
+*┇اكتب : iss*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
 `.trim()
 await conn.sendButtonVid(m.chat, pp, menuA, menuB, lenguajeGB.smsBotonM1(), '.menu', lenguajeGB.smsBotonM2(), '/allmenu', lenguajeGB.smsBotonM3(), '#inventario', fkontak, adReply)
 

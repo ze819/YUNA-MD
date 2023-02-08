@@ -29,7 +29,7 @@ console.log(e)
 }} 
 handler.help = ['kick']
 handler.tags = ['group']
-handler.command = /^(kick|echar|hechar|sacar|ban)$/i
+handler.command = /^(kick|echar|طرد|sacar|ban)$/i
 handler.admin = handler.group = handler.botAdmin = true
 export default handler
 

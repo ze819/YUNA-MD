@@ -23,7 +23,7 @@ var user = number + '@s.whatsapp.net'
 conn.groupParticipantsUpdate(m.chat, [user], 'demote')
 conn.reply(m.chat, lenguajeGB['smsAvisoEG']() + lenguajeGB['smsDemott3'](), fkontak, m)
 }}
-handler.command = /^(demote|quitarpoder|quitaradmin)$/i
+handler.command = /^(demote|رفع|quitaradmin)$/i
 handler.group = true
 handler.admin = true
 handler.botAdmin = true

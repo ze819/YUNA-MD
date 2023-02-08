@@ -1,111 +1,41 @@
-let { MessageType } = (await import('@adiwajshing/baileys')).default
+let handler = async (m, { conn, usedPrefix }) => {
+var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document']
+var document = doc[Math.floor(Math.random() * doc.length)]    
+let text = `
+*—◉ المطور :  wa.me/393271166550*
 
-let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
-  let chat = global.db.data.chats[m.chat]
-let user = global.db.data.users[m.sender]
-let bot = global.db.data.settings[conn.user.jid] || {}
-let name = await conn.getName(m.sender)
-  let type = (args[0] || '').toLowerCase()
-  let _type = (args[0] || '').toLowerCase()
-
-//------- Nombre
-  let nowner = `${wm.split`@`[0]}@s.whatsapp.net`
-  let teksnomor = `
-• @${wm.split`@`[0]} •
-------- ${wm} -------
-`
-
-//------------ BIO
-let ppown = await conn.profilePictureUrl(nomorown + '@s.whatsapp.net', 'image').catch(_ => hwaifu[1]) 
-let teksbio = `
-𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿 💖🐈
-*Wa.me/51993485767*
-
-𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿 *2* 💖🐈
-*Wa.me/573028555763*
-
-𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿 *3* 💖🐈
-*Wa.me/51980771033*
-
-𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿 *4* 💖🐈
-*Wa.me/18134031777*
-
-*---------------------*
-
-*CENTER GATABOT*
-*centergatabot@gmail.com*
-
-𝙂𝘼𝙏𝘼 𝘿𝙄𝙊𝙎 - 𝘼𝙎𝙄𝙎𝙏𝙀𝙉𝘾𝙄𝘼
-*${asistencia}*
-
-*Sr. Pablo* - 𝘼𝙎𝙄𝙎𝙏𝙀𝙉𝘾𝙄𝘼
-*Wa.me/51993042301*
-`
-  let teks = ' '
-const sections = [
-   {
-	title: `PROPIETARIO/OWNER`,
-	rows: [
-	    {title: "📱 • NOMBRE", rowId: ".owner nomor"},
-	{title: "🙌 • NUMERO", rowId: ".owner bio"},
-	{title: "🌐 • CUENTAS OFICIALES", rowId: ".cuentasgb"},
-	{title: "😸 • GRUPOS", rowId: ".grupos"},
-	{title: "🌎 • SCRIPT", rowId: ".sc"},
-	]
-    },{
-	title: `–––––––·• APOYA AL BOT –––––––·•`,
-	rows: [
-	    {title: "💹 • DONAS", rowId: ".paypal"},
-	{title: "🤖 • INSTALARBOT", rowId: ".instalarbot"},
-	{title: "🌟 • PREMIUM", rowId: ".pasepremium"},
-	]
-  },
-]
-
-const listMessage = {
-  text: teks,
-  footer: null,
-  title: `╭━━━✦ *OWNER ✦━━━━⬣
-┃დ HOLA 👋 ${name}
-┃≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋
-┃${wm}
-╰━━━━━✦ *${vs}* ✦━━━━⬣`,
-  buttonText: "HAGA CLICK AQUI",
-  sections
+*—◉ الانستغرام :https://instagram.com/a_e_b_2003*
+`.trim()   
+let buttonMessage= {
+'document': { url: `https://github.com/ahmed1p7` },
+'mimetype': `application/${document}`,
+'fileName': `•⊰『 𝒚𝒖𝒏𝒂 𝒃𝒐𝒕 』⊱• `,
+'fileLength': 99999999999999,
+'pageCount': 200,
+'contextInfo': {
+'forwardingScore': 200,
+'isForwarded': true,
+'externalAdReply': {
+'mediaUrl': 'https://github.com/ahmed1p7 ',
+'mediaType': 2,
+'previewType': 'pdf',
+'title': 'بوت يونا',
+'body': wm,
+'thumbnail': imagen1,
+'sourceUrl': 'https://www.youtube.com/' }},
+'caption': text,
+'footer': wm,
+'buttons':[
+{buttonId: `${usedPrefix}menu`, buttonText: {displayText: '👾 الأوامر 👾'}, type: 1}, 
+{buttonId: `${usedPrefix}donar`, buttonText: {displayText: '📮 تبرع 📮'}, type: 1}],
+'headerType': 6 }
+conn.sendMessage(m.chat, buttonMessage, { quoted: m })
+//let vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;𝑩𝒓𝒖𝒏𝒐 𝑺𝒐𝒃𝒓𝒊𝒏𝒐 👑;;;\nFN:𝑩𝒓𝒖𝒏𝒐 𝑺𝒐𝒃𝒓𝒊𝒏𝒐 👑\nORG:𝑩𝒓𝒖𝒏𝒐 𝑺𝒐𝒃𝒓𝒊𝒏𝒐 👑\nTITLE:\nitem1.TEL;waid=5219996125657:+521 999 612 5657\nitem1.X-ABLabel:𝑩𝒓𝒖𝒏𝒐 𝑺𝒐𝒃𝒓𝒊𝒏𝒐 👑\nX-WA-BIZ-DESCRIPTION:[❗] ᴄᴏɴᴛᴀᴄᴛᴀ ᴀ ᴇsᴛᴇ ɴᴜᴍ ᴘᴀʀᴀ ᴄᴏsᴀs ɪᴍᴘᴏʀᴛᴀɴᴛᴇs.\nX-WA-BIZ-NAME:𝑩𝒓𝒖𝒏𝒐 𝑺𝒐𝒃𝒓𝒊𝒏𝒐 👑\nEND:VCARD`
+//await conn.sendMessage(m.chat, { contacts: { displayName: 'Bruno Sobrino 👑', contacts: [{ vcard }] }}, {quoted: m})
+//const data = global.owner.filter(([id, isCreator]) => id && isCreator)
+//await conn.sendContact(m.chat, data.map(([id, name]) => [id, name]), m)
 }
-
-  try {
-    if (/(contacto|owner|creator|propietario|dueño|dueña|propietaria|dueño|creadora|creador)/i.test(command)) {
-      const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
-        switch (type) {
-          case 'nomor':
-          conn.reply(m.chat, "Nombre del bot : GataBot-MD 🐈", m, { contextInfo: { mentionedJid: [nowner] }})
-            break
-            case 'bio':
-          conn.sendHydrated(m.chat, teksbio, wm, ppown, "https://www.instagram.com/gata_dios", "Instagram",null, [null, null], m)
-            break
-          default:
-            return await conn.sendMessage(m.chat, listMessage, { quoted: m, contextInfo: { mentionedJid: [m.sender] }})
-        }
-    } else if (/aoaooaoaooaoa/i.test(command)) {
-      const count = args[2] && args[2].length > 0 ? Math.min(99999999, Math.max(parseInt(args[2]), 1)) : !args[2] || args.length < 4 ? 1 :Math.min(1, count)
-      switch (_type) {
-        case 't':
-          break
-        case '':
-          break
-
-        default:
-          return conn.sendButton( m.chat, caption, wm, null, [`⋮☰ Menu`, `.menu`], m)
-      }
-    }
-  } catch (err) {
-    m.reply("Error\n\n\n" + err.stack)
-  }
-}
-
 handler.help = ['owner', 'creator']
 handler.tags = ['info']
-handler.command = /^(contacto|owner|creator|propietario|dueño|dueña|propietaria|dueño|creadora|creador)$/i
-
+handler.command = /^(contacto|owner|creator|propietario|dueño|مالك|propietaria|dueño|creadora|creador)$/i
 export default handler

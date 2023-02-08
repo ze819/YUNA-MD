@@ -4,7 +4,7 @@ let lenGB = lenguajeGB.lenguaje() == 'en' ? usedPrefix + 'on antitoxic' : usedPr
 if (!db.data.chats[m.chat].antitoxic && m.isGroup) return conn.sendButton(m.chat, wm, lenguajeGB.smsAdveu1() + lenGB, null, [[lenguajeGB.smsEncender(), lenGB]], fkontak, m) 
 
 let who
-let img = 'https://i.imgur.com/vWnsjh8.jpg'
+let img = 'https://i.imgur.com/fAlRou0.jpeg'
 if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text
 else who = m.chat
 let name = await conn.getName(m.sender)	
@@ -24,7 +24,7 @@ console.log(e)
 }}
 handler.help = ['addprem <@user>']
 handler.tags = ['owner']
-handler.command = /^(del|delete|eliminar|\-)advertir|advertencia|warn(ing)?$/i
+handler.command = /^(del|delete|eliminar|\-)advertir|حذف|warn(ing)?$/i
 handler.group = true
 handler.admin = true
 handler.botAdmin = true

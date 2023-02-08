@@ -46,7 +46,7 @@ throw m.reply(`${lenguajeGB['smsAddB2']()}`)}
 }
 handler.help = ['add', '+'].map(v => v + ' número')
 handler.tags = ['group']
-handler.command = /^(add|agregar|añadir|\+)$/i
+handler.command = /^(add|اضافه|añadir|\+)$/i
 handler.group = true
 handler.admin = true
 handler.botAdmin = true

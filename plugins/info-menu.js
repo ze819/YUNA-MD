@@ -70,31 +70,29 @@ let fsizedoc = '1'.repeat(10)
 let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: wm, body: '👋 ' + username, mediaUrl: ig, description: 'Hola', previewType: 'PHOTO', thumbnail: await(await fetch(gataMenu.getRandom())).buffer(), sourceUrl: redesMenu.getRandom() }}}
 
 let menuA = `🌟 ${lenguajeGB['smsConfi2']()} *${username}*`.trim()
-let menuB = `╭┄〔 *${wm}* 〕┄⊱
-┊დ *${week}, ${date}*
-┊დ *${lenguajeGB['smsBotonM4']()} » ${Object.keys(global.db.data.users).length}* 
-┊
-┊დ *${lenguajeGB['smsBotonM5']()} »* ${role}
-┊დ *${lenguajeGB['smsBotonM6']()} » ${level}*
-┊დ *${lenguajeGB['smsBotonM7']()} »* ${user.premiumTime > 0 ? '✅' : '❌'}
-╰┄┄┄┄〔 *𓃠 ${vs}* 〕┄┄┄┄⊱
-
-⠇ ${lenguajeGB['smsTex13']()} 💫
-∘ _${usedPrefix}cuentasgatabot | cuentasgb_
-∘ _${usedPrefix}gruposgb | grupos | groupgb_
-∘ _${usedPrefix}donar | donate_
-∘ _${usedPrefix}listagrupos | grouplist_
-∘ _${usedPrefix}estado | heygata | status_
-∘ _${usedPrefix}infogata | infobot_
-∘ _${usedPrefix}instalarbot | installbot_
-∘ _${usedPrefix}creadora | owner_
-∘ _${usedPrefix}velocidad | ping_
-∘ _${usedPrefix}serbot | jadibot_
-∘ _${usedPrefix}bots | listjadibots_
-∘ _${usedPrefix}detener | stop_
-∘ _${usedPrefix}reporte *texto*_
-∘ _términos y condiciones_
-∘ _Bot_ 
+let menuB = ` *تزكر قبل كل أمر يجب أن تستخدم ${usedPrefix}*
+*┇⊛*  ${lenguajeGB['smsTex13']()} 💫
+*┇⊛هذا الأمر يرسل لك حسابات رسمي ل بوت*
+*┇اكتب : حسابات_يونا*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر لمن يرد تبرع لنا*
+*┇اكتب : تبرع او دعم*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يخرج لك قربات بوت*
+*┇اكتب : قروبات يونا او قروبات*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يعرض لك مطور بوت*
+*┇اكتب : مالك او مطور*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يعرض لك شروط استخدام بوت*
+*┇اكتب : شروط*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يمكنك من خلاله الابلاغ عن مشاكل في بوت*
+*┇اكتب : بلاغ*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
+*┇⊛هذا الأمر يعرض لك وقت تشغيل بوت*
+*┇اكتب : sc*
+*┇⊰ا᯽ا⊱┈──╌❊╌──┈⊰ا᯽ا⊱*
 `.trim()
 await conn.sendButtonVid(m.chat, pp, menuA, menuB, lenguajeGB.smsBotonM1(), '.menu', lenguajeGB.smsBotonM2(), '/allmenu', lenguajeGB.smsBotonM3(), '#inventario', fkontak, adReply)
 

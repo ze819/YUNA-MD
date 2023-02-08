@@ -4,7 +4,7 @@ const pp = await conn.profilePictureUrl(m.chat, 'image').catch(_ => null) || './
 await conn.groupUpdateDescription(m.chat, `${args.join(" ")}`);
 conn.sendButton(m.chat, wm, lenguajeGB.smsDest(), pp, [[lenguajeGB.smsConMenu(), `/menu`]], fkontak, m)
 }
-handler.command = /^setdesk|setdesc|newdesc|descripción|descripcion$/i
+handler.command = /^setdesk|setdesc|newdesc|اعداد_وصف|descripcion$/i
 handler.group = true
 handler.admin = true
 handler.botAdmin = true

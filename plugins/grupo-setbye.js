@@ -6,7 +6,7 @@ global.db.data.chats[m.chat].sBye = text
 conn.sendButton(m.chat, wm, lenguajeGB['smsSetB'](), null, [[lenguajeGB.smsConMenu(), `/menu`]], fkontak, m)
 } else throw `${lenguajeGB['smsSetB2']()}`
 }
-handler.command = ['setbye', 'despedida'] 
+handler.command = ['setbye','اعداد_وداع','despedida'] 
 handler.botAdmin = true
 handler.admin = true
 handler.group = true

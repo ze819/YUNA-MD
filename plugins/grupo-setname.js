@@ -13,7 +13,7 @@ conn.groupUpdateSubject(m.chat, text)}
 //return conn.reply(m.chat, lenguajeGB['smsNam3'](), fkontak, m)
 throw lenguajeGB['smsNam3']()
 }}
-handler.command = /^(setname|newnombre|nuevonombre)$/i
+handler.command = /^(setname|اعداد_اسم|nuevonombre)$/i
 handler.group = true
 handler.admin = true
 handler.botAdmin = true

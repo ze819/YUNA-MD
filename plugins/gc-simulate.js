@@ -1,10 +1,10 @@
 let handler = async (m, { conn, usedPrefix, command, args: [event], text }) => {
 if (!event) return await conn.sendButton(m.chat, `*EJEMPLO:*
 
-${usedPrefix + command} welcome @user
-${usedPrefix + command} bye @user
-${usedPrefix + command} promote @user
-${usedPrefix + command} demote @user`.trim(), wm, null, [['WELCOME', '#simulate welcome'], ['BYE', '#simulate bye']])
+${usedPrefix + command} welcome @منشن
+${usedPrefix + command} bye @منشن
+${usedPrefix + command} promote @منشن
+${usedPrefix + command} demote @منشن`.trim(), wm, null, [['WELCOME', '#simulate welcome'], ['BYE', '#simulate bye']])
 let mentions = text.replace(event, '').trimStart()
 let who = mentions ? conn.parseMention(mentions) : []
 let part = who.length ? who : [m.sender]
@@ -35,7 +35,7 @@ case 'quitarpoder':
 act = 'demote'
 break
 default:
-throw 'error, ingrese una opcion valida'
+throw 'خطأ ، أدخل خيارا صالحا'
 }
 if (act) return conn.participantsUpdate({
 id: m.chat,

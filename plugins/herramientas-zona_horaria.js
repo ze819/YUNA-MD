@@ -1,4 +1,4 @@
-import moment from 'moment-timezone'
+/*import moment from 'moment-timezone'
 
 let handler = async (m, { conn }) => {  
 const fechaper = moment().tz('America/Lima').format('DD/MM HH:mm')
@@ -53,3 +53,4 @@ handler.tags = ['info']
 handler.command = /^(horario)$/i
 
 export default handler
+*/

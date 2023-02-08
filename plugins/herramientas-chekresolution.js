@@ -8,7 +8,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 	
 let q = m.quoted ? m.quoted : m
 let mime = (q.msg || q).mimetype || ''
-if (!mime) throw "*[❕] POR FAVOR RESPONDE A UNA IMAGEN*"
+if (!mime) throw "*[❕] ارجو الرد على صورة*"
 
 let media = await q.download()
 let isMedia = /image\/(png|jpe?g|gif)|video\/mp4/.test(mime)
@@ -18,10 +18,10 @@ let source = await jimp.read(await link)
 let height = await source.getHeight()
 let width = await source.getWidth()
 
-m.reply(`_*RESOLUTION :*_ ${width} x ${height}
-> Ancho : ${width}
-> Altura : ${height}
-> Link: ${link}`)
+m.reply(`_*دقة :*_ ${width} x ${height}
+> واسع : ${width}
+> ارتفاع : ${height}
+> رابط: ${link}`)
 }
 handler.help = ['cekresolution <reply | caption>', 'cekreso <reply | caption>']
 handler.tags = ['tool']

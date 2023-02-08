@@ -65,24 +65,24 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 let mentionedJid = [who]
 let username = conn.getName(who)
 
-let chat = `👤 *El chat Anónimo funciona solo al privado del Bot.*
+let chat = `👤  *الدردشة المجهولة لا تعمل إلا عندما تكون خاصة من الروبوت*
 
-👥 Consiste en usar el número del Bot para hablar con otras personas, es decir las dos personas estarán a la vez escribiendo por el chat privado del Bot, de esa manera ninguna 🔒de las dos personas pueden ver su número, Foto, usuario, descripción etc... 🔒
+ 👥 يتكون من استخدام رقم الروبوت للتحدث إلى أشخاص آخرين ، أي أن الشخصين سيكتبان في نفس الوقت من خلال الدردشة الخاصة للبوت ، وبهذه الطريقة لا يستطيع أي من الشخصين رؤية رقمهما وصورتهما ومستخدمهما والوصف وما إلى ذلك ... 🔒
 
-✨ Para poder hacer uso de esta función debes hacer lo siguiente:
-⚡️ Ingresa al chat privado del Bot
-⚡️ Escribe es siguiente comando
-*#start*
+ من أجل استخدام هذه الوظيفة ، يجب عليك القيام بما يلي:
+ ⚡️ أدخل الدردشة الخاصة للبوت
+ الكتابة تتبع الأمر
+اكتب :  *#start*
 
-✅ Una vez hecho lo anterior solo tienes que tener paciencia a que otra persona use el mismo comando (#start) para poder ser vinculados por medio del número del Bot y empezar a interactuar 
+ ✅ بمجرد الانتهاء من ما سبق ، عليك فقط التحلي بالصبر عندما يستخدم شخص آخر الأمر نفسه (#start) لتتمكن من الارتباط من خلال رقم الروبوت والبدء في التفاعل
 
-✅ Si dejas activado el #start tendrás más posibilidades de interactuar con la otra persona de forma Anónima 
+ ✅ إذا تركت الخيار #start مفعلًا ، فسيكون لديك المزيد من الفرص للتفاعل مع الشخص الآخر بشكل مجهول
 
-🚪 En caso que quieras salir del chat anónimo usa el siguiente comando 
-*#leave* 
+ 🚪 في حالة رغبتك في مغادرة الدردشة المجهولة ، استخدم الأمر التالي
+اكتب: *leave#*
 
-✅ De esa forma ya dejarás de estar en el chat anónimo del Bot
-❗ No nos hacemos responsables del mal uso que le puedas dar a esta función del Bot.`
+ ✅ بهذه الطريقة لن تكون في الدردشة المجهولة للبوت
+ ❗ نحن لسنا مسؤولين عن سوء الاستخدام الذي يمكن أن تقدمه لهذه الوظيفة للروبوت..`
 
 const fkontak = {
 	"key": {
@@ -99,10 +99,10 @@ const fkontak = {
 	"participant": "0@s.whatsapp.net"
 }
 
-await conn.sendButton(m.chat, chat, wm, pp, [['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ | 𝘽𝙖𝙘𝙠 𝙩𝙤 𝙈𝙚𝙣𝙪 ☘️', '/menu'] ], fkontak, m)  
+await conn.sendButton(m.chat, chat, wm, pp, [['قائمة الأوامر☘️', '/menu'] ], fkontak, m)  
 }
 
-handler.command = /^(anonimochat|chatanonimo|AnonimoChat|ChatAnonimo|chatanónimo|anónimochat|anonimoch)$/i
+handler.command = /^(anonimochat|تحدث|AnonimoChat|ChatAnonimo|chatanónimo|anónimochat|anonimoch)$/i
 handler.exp = 70
 export default handler
 
