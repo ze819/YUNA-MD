@@ -59,6 +59,15 @@ npm start
 
 [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/ahmed1p7/YUNABOT-MD&branch=master&name=yunabot-md)
 
+  ## ```هيروكو بيلدباك```
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ahmed1p7/YUNA-MD)
+
+| رابط |
+|--------|--------|
+| **ففمبيغ** |[here](https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest) |
+| **إيماجيك** | [here](https://github.com/DuckyTeam/heroku-buildpack-imagemagick) |
+
+  
 ------------------
 ----
 ### حول بوت  <img src="https://i.pinimg.com/originals/0e/c9/89/0ec989dde8b5fc0deef4e5b09292b605.gif" height="30px">
