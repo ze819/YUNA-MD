@@ -42,17 +42,17 @@ if (m.sender.startsWith('+212698125483' || '+212698125483')) {
 global.db.data.users[m.sender].banned = true
 await conn.reply(m.chat, texto, m)
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}
-	/*
-if (m.sender.startsWith('2' || '2')) {
+	
+if (m.sender.startsWith('+97335094195' || '+97335094195')) {
 global.db.data.users[m.sender].banned = true
 await conn.reply(m.chat, texto, m)
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}
 	
-if (m.sender.startsWith('91' || '91')) {
+if (m.sender.startsWith('+967714310489' || '+967714310489')) {
 global.db.data.users[m.sender].banned = true
 await conn.reply(m.chat, texto, m)
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}
-
+/*
 if (m.sender.startsWith('48' || '48')) {
 global.db.data.users[m.sender].banned = true
 await conn.reply(m.chat, texto, m)

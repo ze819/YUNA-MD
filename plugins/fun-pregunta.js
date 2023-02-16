@@ -1,13 +1,13 @@
 import fetch from 'node-fetch'
 let handler = async (m, {conn, command, usedPrefix, text }) => { 
-if (!text) throw `${lenguajeGB['smsAvisoMG']()} اكتب سؤالك ليتم الرد عليه \مثال\n*${usedPrefix + command} يونا تحبيني?*`   
+if (!text) throw `${lenguajeGB['smsAvisoMG']()} اكتب سؤالك ليتم الرد عليه\nمثال\n*${usedPrefix + command} كيف حالك?*`   
 let res = await fetch(`https://api.simsimi.net/v2/?text=${text}&lc=ar`)
 let json = await res.json()
 if (json.success)
   
 m.reply(`╭━〔 سؤال 〕━⬣  
-⁉️ سؤال : 
-⚠️ ${text}
+⁉️ سوال: 
+💖 ${text}
 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ✅ جواب
 ❤️ : ${json.success.replace('simsimi', 'simsimi').replace('Simsimi', 'Simsimi').replace('sim simi', 'sim simi')}`) 
@@ -21,5 +21,5 @@ m.reply(`╭━〔 سؤال 〕━⬣
   
 handler.help = ['pregunta <texto>?']
 handler.tags = ['kerang']
-handler.command = /^pregunta|preguntas|يونا|سوال$/i  
+handler.command = /^pregunta|preguntas|يونا$/i  
 export default handler

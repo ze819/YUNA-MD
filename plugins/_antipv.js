@@ -14,27 +14,4 @@ user.banned = true
 if (!chat.banned) return m.reply('*لم يتم نفي هذه الدردشة!!*')
   chat.banned = false
 return !1
-}}*/
-/*
-import fs from 'fs'
-let handler = async (m, { conn, text } ) => {
-let groups = Object.entries(conn.chats).filter(([jid, chat]) => jid.endsWith('@g.us') && chat.isChats && !chat.metadata?.read_only && !chat.metadata?.announce).map(v => v[0])
-
-setInterval(async () => {
-let message = JSON.parse(fs.readFileSync('./src/Islam/Islam.json')).message
-for (let id of groups) {
-await conn.sendButton(id, message, '', fs.readFileSync('./src/Islam/Islam.json'), [['👋', '.ok'], ['😞', '.a']], false, {
-contextInfo: { externalAdReply: {
-title: 'YUNA BOT ',
-body: 'Greeting Message',
-sourceUrl: `https://www.instagram.com/a_e_b_2003`,
-thumbnail: fs.readFileSync('./media/menus/img11.jpg') }}})
-}
-}, 18000000) // every 5 hours = 5 * 60 * 60 * 1000 milliseconds
-}
-handler.help = ['broadcastgroup', 'bcgc'].map(v => v + ' <teks>')
-handler.tags = ['owner']
-handler.command = /.*/i
-handler.rowner = true
-handler.exp = 500
-export default handler*/
+}}*/  
