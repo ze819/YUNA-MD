@@ -94,7 +94,7 @@ export async function handler(chatUpdate) {
 		                    		    
           if (!isNumber(user.afk)) user.afk = -1
 	      //if (!('autolevelup' in user))  user.autolevelup = true
-	      if (!('role' in user)) user.role = '*NOVATO(A)* 🪤'
+	      if (!('role' in user)) user.role = '*NOVATO(A)* '
               if (!isNumber(user.agility)) user.agility = 0
               if (!isNumber(user.anakanjing)) user.anakanjing = 0
               if (!isNumber(user.anakcentaur)) user.anakcentaur = 0
@@ -490,7 +490,7 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.wood)) user.wood = 0
               if (!isNumber(user.wortel)) user.wortel = 0
 		    
-              if (!user.lbars) user.lbars = '[▒▒▒▒▒▒▒▒▒]'
+              if (!user.lbars) user.lbars = '[]'
               if (!user.job) user.job = 'Desempleo'
               if (!user.premium) user.premium = false
               if (!user.premium) user.premiumTime = 0
@@ -761,7 +761,7 @@ export async function handler(chatUpdate) {
                     lastweaponclaim: 0,
                     lastweekly: 0,
                     lastwork: 0,
-                    lbars: '[▒▒▒▒▒▒▒▒▒]',
+                    lbars: '[]',
                     legendary: 0,
                     lele: 0,
                     leleb: 0,
@@ -1207,7 +1207,7 @@ export async function handler(chatUpdate) {
                     m.reply('Exp limit') // Hehehe
                 else               
                 if (!isPrems && plugin.money && global.db.data.users[m.sender].money < plugin.money * 1) {
-                    this.reply(m.chat, `لا تملك كوينز`, m)
+                    this.reply(m.chat, `   `, m)
                     continue     
 		}
 			
@@ -1277,7 +1277,7 @@ export async function handler(chatUpdate) {
                         m.reply(+m.limit + lenguajeGB.smsCont8())
                 }
                  if (m.money)
-                        m.reply(+m.money + ' كوينز مستخدم')
+                        m.reply(+m.money + '   ()')
               
                 break
             }
@@ -1340,7 +1340,7 @@ export async function handler(chatUpdate) {
 	    
         if (!db.data.chats[m.chat].reaction && m.isGroup) throw 0
         if (!m.fromMem && m.text.match(/(ata|des|able|izo|ido|.-.|._.|:)|:(|:v|v:|o.o|;v|v;|v':|:'v)/gi)) {
-        let emot = pickRandom(["🧸", "😗", "😄", "😋", "🥰", "😽", "🙀", "😿", "😾", "🤩", "😏", "😳", "🕌", "🤯", "😱", "😨", "🤫", "🥴", "🤧", "🤑", "🤠", "🤖", "🤝", "💪", "👑", "😚", "🐱", "🇦🇪", "🐆", "🐅", "⚡️", "🌈", "☃️", "⛄️", "🌝", "🌛", "🌜", "🍓", "🍎", "🎈", "🪄", "❤️", "🧡", "💛", "💚", "💙", "💜", "🖤", "🤍", "💘", "💝", "💟", "🌝", "😎", "🔥", "💖", "🐦"])
+        let emot = pickRandom(["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""])
         this.sendMessage(m.chat, { react: { text: emot, key: m.key }})}
         function pickRandom(list) { return list[Math.floor(Math.random() * list.length)]}
 		
@@ -1374,8 +1374,12 @@ export async function participantsUpdate({ id, participants, action }) {
                     } finally {
                         text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || lenguajeGB.smsCont12()) :
                             (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', await this.getName(user)) //.replace('@user', '@' + user.split('@')[0])
-                            let apii = await this.getFile(pp)			
-this.sendButton(id, wm, text, apii.data, [[(action == 'add' ? lenguajeGB.smsCont13() : lenguajeGB.smsCont14()), (action == 'add' ? '.s' : '.s')], ['تسجيل', `#تسجيل`]], null, {mentions: this.parseMention(text)})
+                            let apii = await this.getFile(pp)
+//this.sendButton(id, wm, text, apii.data, [[(action == 'add' ? lenguajeGB.smsCont13() : lenguajeGB.smsCont14()), (action == 'add' ? '.welgc' : '.welgc')], ['💖 Ser Verificado(a)', `.verify`]], null, {mentions: this.parseMention(text)})
+//}}}
+			    
+//CÓDIGO OFUSCADO - MOTIVOS RESERVADOS >> (DIEGO-OFC)			
+this.sendButton(id, wm, text, apii.data, [[(action == 'add' ? lenguajeGB.smsCont13() : lenguajeGB.smsCont14()), (action == 'add' ? '.s' : '.s')], ['تسجيل', `.تسجيل`]], null, {mentions: this.parseMention(text)})
 }}}
 			    
 break
@@ -1439,18 +1443,14 @@ export async function deleteUpdate(message) {
         if (chat.delete)
             return
         await this.reply(msg.chat, `
-╭━─━─━─≪🔴≫─━─━─━╮
-│ 🤨 أحذف رسالة 🤨
-│◤━━━━━ ☆. ∆ .☆ ━━━━━◥
-│ 🔴 مكافحة الحذف 🔴
-│◤━━━━━ ☆. ∆ .☆ ━━━━━◥
-│🔸️ *رقم :* @${participant.split`@`[0]} 
-│◤━━━━━ ☆. ∆ .☆ ━━━━━◥
-│🔸لتعطيل هذا الخيار,, 
-│🔸️كتب 
-│#off antidelete
-│#enable delete
-╰━─━─━─≪🔴≫─━─━─━╯
+
+     
+ .  . 
+     
+ .  . 
+ *:* @${participant.split`@`[0]} 
+ .  . 
+
 `.trim(), msg, {
             mentions: [participant]
         })
@@ -1475,7 +1475,7 @@ let msg = {
 }[type]
 //if (msg) return m.reply(msg)
 let tg = { quoted: m, userJid: conn.user.jid }
-let prep = generateWAMessageFromContent(m.chat, { extendedTextMessage: { text: msg, contextInfo: { externalAdReply: { title: lenguajeGB.smsAvisoAG().slice(0,-2), body: [wm, ' بوت ' + gt + ' 🧸', '👑+ 393271166550'].getRandom(), thumbnail: gataImg.getRandom(), sourceUrl: [md, yt, ig, paypal, fb].getRandom() }}}}, tg)
+let prep = generateWAMessageFromContent(m.chat, { extendedTextMessage: { text: msg, contextInfo: { externalAdReply: { title: lenguajeGB.smsAvisoAG().slice(0,-2), body: [wm, ' ' + gt + ' ', '+ 393271166550 '].getRandom(), thumbnail: gataImg.getRandom(), sourceUrl: [md, yt, ig, paypal, fb].getRandom() }}}}, tg)
 if (msg) return conn.relayMessage(m.chat, prep.message, { messageId: prep.key.id })
 }
 
