@@ -16,14 +16,13 @@ global.mods = []
 global.prems = [' 393271166550 '], 
    
   
-//⊱ ━━━━━.⋅ IDIOMA : LENGUAJE ⋅.━━━━ ⊰ 
-//Agrega el Idioma que quieres que tenga GataBot-MD
-//Add the language you want GataBot-MD to have
+//⊱ ━━━━━.⋅ LENGUAJE ⋅.━━━━ ⊰ 
+//Add the language you want YUNA-MD to have
 //  es = Español         id = Bahasa Indonesia
 //  en = English         pt = Português 
 //  ar = عرب  
 
-global.lenguajeGB = ar  //Idioma de GataBot, Ejemplo: es | en | pt...
+global.lenguajeGB = ar  //Idioma de YUNA-MD, Ejemplo: es | en | pt...
 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
@@ -223,9 +222,10 @@ global.img13 = 'https://i.imgur.com/Hff1jGB.jpeg'
 global.img14 = 'https://i.imgur.com/zFhpTZ4.jpeg'
 global.img15 = 'https://i.imgur.com/QlxuxAS.jpeg'
 global.img17 = 'https://imgur.com/a/2Zf1VTG '
+global.img18 = 'https://imgur.com/a/2Zf1VTG'
 global.welgata = [ig, yt2, yt2, ig, md, ig, yt, paypal, yt2, yt2, ig]
 global.redesMenu = [nna, nn, nnn, nnnt, nnntt, nnnttt, md, ig, paypal, yt]
-global.gataMenu = [img, img2, img6, img7, img8, img9, img13, img14, img15, img17]
+global.gataMenu = [img, img2, img6, img7, img8, img9, img13, img14, img15, img17, img18]
 global.gataVidMenu = ['./media/menus/Menuvid1.jpg', './media/menus/Menuvid2.jpg', './media/menus/Menuvid3.jpg']
 global.gataImg = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8, imagen9, imagen10, imagen11, imagen12, imagen13]
 

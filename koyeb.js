@@ -7,9 +7,9 @@ RUN sudo dnf -y update &&\
 
 RUN git clone https://github.com/ahmed1p7/YUNA-MD
 
-WORKDIR /root/YunaBot-MD
+WORKDIR /root/YUNA-MD
 
-COPY ./root/YunaBot-MD
+COPY ./root/YUNA-MD
 
 RUN yarn install
 
