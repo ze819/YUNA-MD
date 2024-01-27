@@ -1,63 +1,69 @@
-/*let handler = async (m, { conn, text, command, usedPrefix, args }) => {
-let pp = 'https://www.bighero6challenge.com/images/thumbs/Piedra,-papel-o-tijera-0003318_1584.jpeg'
-if (!args[0]) return conn.sendHydrated(m.chat, '𝙋𝙄𝙀𝘿𝙍𝘼, 𝙋𝘼𝙋𝙀𝙇, 𝙊 𝙏𝙄𝙅𝙀𝙍𝘼\n\n𝙋𝙪𝙚𝙙𝙚𝙨 𝙪𝙨𝙖𝙧 𝙡𝙤𝙨 𝘽𝙊𝙏𝙊𝙉𝙀𝙎 𝙥𝙖𝙧𝙖 𝙟𝙪𝙜𝙖𝙧 𝙤 𝙩𝙖𝙢𝙗𝙞𝙚𝙣 𝙥𝙪𝙚𝙙𝙚𝙨 𝙪𝙨𝙖𝙧 𝙚𝙨𝙩𝙤𝙨 𝙘𝙤𝙢𝙖𝙣𝙙𝙤𝙨:\n.ppt 𝙥𝙞𝙚𝙙𝙧𝙖\n.ppt 𝙥𝙖𝙥𝙚𝙡\n.ppt 𝙩𝙞𝙟𝙚𝙧𝙖\n\n𝙐𝙨𝙚 𝙚𝙣 𝙢𝙞𝙣𝙪𝙨𝙘𝙪𝙡𝙖𝙨', wm, pp, null, null, null, null, [
-['𝙋𝙞𝙚𝙙𝙧𝙖 🥌', `${usedPrefix + command} piedra`],
-['𝙋𝙖𝙥𝙚𝙡 📄', `${usedPrefix + command} papel`],
-['𝙏𝙞𝙟𝙚𝙧𝙖 ✂️', `${usedPrefix + command} tijera`]
-], m)
-var astro = Math.random()
-if (astro < 0.34) {
-astro = 'piedra' 
-} else if (astro > 0.34 && astro < 0.67) {
-astro = 'tijera' 
-} else {
-astro = 'papel'
-}
-if (text == astro) {
-global.db.data.users[m.sender].exp += 500
-m.reply(`🔰 Empate!\n\n*👉🏻 Tu: ${text}\n👉🏻 El Bot: ${astro}\n🎁 Premio +500 XP*`)
-} else if (text == 'papel') {
-if (astro == 'piedra') {
-global.db.data.users[m.sender].exp += 1000
-m.reply(`🥳 Tú ganas! 🎉\n\n*👉🏻 Tu: ${text}\n👉🏻 El Bot: ${astro}\n🎁 Premio +1000 XP*`)
-} else {
-global.db.data.users[m.sender].exp -= 300
-m.reply(`☠️ Tú pierdes! ❌\n\n*👉🏻 Tu: ${text}\n👉🏻 El Bot: ${astro}\n❌ Premio -300 XP*`)
-}
-} else if (text == 'tijera') {
-if (astro == 'papel') {
-global.db.data.users[m.sender].exp += 1000
-m.reply(`🥳 Tú ganas! 🎉\n\n*👉🏻 Tu: ${text}\n👉🏻 El Bot: ${astro}\n🎁 Premio +1000 XP*`)
-} else {
-global.db.data.users[m.sender].exp -= 300
-m.reply(`☠️ Tú pierdes! ❌\n\n*👉🏻 Tu: ${text}\n👉🏻 El Bot: ${astro}\n❌ Premio -300 XP*`)
-}
-} else if (text == 'tijera') {
-if (astro == 'papel') {
-global.db.data.users[m.sender].exp += 1000
-m.reply(`🥳 Tú ganas! 🎉\n\n*👉🏻 Tu: ${text}\n👉🏻 El Bot: ${astro}\n🎁 Premio +1000 XP*`)
-} else {
-global.db.data.users[m.sender].exp -= 300
-m.reply(`☠️ Tú pierdes! ❌\n\n*👉🏻 Tu: ${text}\n👉🏻 El Bot: ${astro}\n❌ Premio -300 XP*`)
-}
-} else if (text == 'papel') {
-if (astro == 'piedra') {
-global.db.data.users[m.sender].exp += 1000
-m.reply(`🥳 Tú ganas! 🎉\n\n*👉🏻 Tu: ${text}\n👉🏻 El Bot: ${astro}\n🎁 Premio +1000 XP*`)
-} else {
-global.db.data.users[m.sender].exp -= 300
-m.reply(`☠️ Tú pierdes! ❌\n\n*👉🏻 Tu: ${text}\n👉🏻 El Bot: ${astro}\n❌ Premio -300 XP*`)
-}
-} else if (text == 'piedra') {
-if (astro == 'tijera') {
-global.db.data.users[m.sender].exp += 1000
-m.reply(`🥳 Tú ganas! 🎉\n\n*👉🏻 Tu: ${text}\n👉🏻 El Bot: ${astro}\n🎁 Premio +1000 XP*`)
-} else {
-global.db.data.users[m.sender].exp -= 300
-m.reply(`☠️ Tú pierdes! ❌\n\n*👉🏻 Tu: ${text}\n👉🏻 El Bot: ${astro}\n❌ Premio -300 XP*`)
-}
-}}
-handler.help = ['ppt']
-handler.tags = ['games']
-handler.command = /^(ppt)$/i
-export default handler*/
+const handler = async (m, { conn, text, command, usedPrefix, args }) => {
+  // الصورة المستخدمة في اللعبة (ورقة، مقص، حجر)
+  const pp = 'https://telegra.ph/file/c7924bf0e0d839290cc51.jpg';
+
+  // 60000 = 1 دقيقة // 30000 = 30 ثانية // 15000 = 15 ثانية // 10000 = 10 ثوان
+  const time = global.db.data.users[m.sender].wait + 10000;
+  if (new Date - global.db.data.users[m.sender].wait < 10000) throw `*🕓 عليك الانتظار ${Math.floor((time - new Date()) / 1000)} ثواني قبل أن تتمكن من اللعب مرة أخرى*`;
+
+  if (!args[0]) return conn.reply(m.chat, `*حجر 🗿 , ورقة 📄 o مقص ✂️*\n\n*—◉ يمكنك استخدام هذه الأوامر:*\n*◉ ${usedPrefix + command} حجر*\n*◉ ${usedPrefix + command} ورقة*\n*◉ ${usedPrefix + command} مقص*\n\n*يمكنك أيضًا استخدام الإيموجيات:*\n✊ (للحجر) | ✌️ (للمقص) | 🖐️ (للورق)*`, m);
+  
+  // تحويل الإيموجيات إلى الأوامر المعترف بها
+  const emojiToCommand = {
+    '✊': 'حجر',
+    '✌️': 'مقص',
+    '🖐️': 'ورقة'
+  };
+
+  const selectedEmoji = text.trim();
+  const selectedCommand = emojiToCommand[selectedEmoji];
+
+  if (!selectedCommand) {
+    throw `*إيموجي غير صالح! يرجى استخدام إيموجيات: ✊ (للحجر) | ✌️ (للمقص) | 🖐️ (للورق)*`;
+  }
+
+  let astro = Math.random();
+  if (astro < 0.34) {
+    astro = 'حجر';
+  } else if (astro > 0.34 && astro < 0.67) {
+    astro = 'مقص';
+  } else {
+    astro = 'ورقة';
+  }
+
+  if (selectedCommand == astro) {
+    global.db.data.users[m.sender].exp += 500;
+    m.reply(`*🔰 تعادل!*\n\n*👉🏻 أنت: ${selectedCommand}*\n*👉🏻 البوت: ${astro}*\n*🎁 جائزة +500 نقطة خبرة*`);
+  } else if (selectedCommand == 'ورقة') {
+    if (astro == 'حجر') {
+      global.db.data.users[m.sender].exp += 1000;
+      m.reply(`*🥳 أنت الفائز! 🎉*\n\n*👉🏻 أنت: ${selectedCommand}*\n*👉🏻 البوت: ${astro}*\n*🎁 جائزة +1000 نقطة خبرة*`);
+    } else {
+      global.db.data.users[m.sender].exp -= 300;
+      m.reply(`*☠️ أنت الخاسر! ❌*\n\n*👉🏻 أنت: ${selectedCommand}*\n*👉🏻 البوت: ${astro}*\n*❌ جائزة -300 نقطة خبرة*`);
+    }
+  } else if (selectedCommand == 'مقص') {
+    if (astro == 'ورقة') {
+      global.db.data.users[m.sender].exp += 1000;
+      m.reply(`*🥳 أنت الفائز! 🎉*\n\n*👉🏻 أنت: ${selectedCommand}*\n*👉🏻 البوت: ${astro}*\n*🎁 جائزة +1000 نقطة خبرة*`);
+    } else {
+      global.db.data.users[m.sender].exp -= 300;
+      m.reply(`*☠️ أنت الخاسر! ❌*\n\n*👉🏻 أنت: ${selectedCommand}*\n*👉🏻 البوت: ${astro}*\n*❌ جائزة -300 نقطة خبرة*`);
+    }
+  } else if (selectedCommand == 'حجر') {
+    if (astro == 'مقص') {
+      global.db.data.users[m.sender].exp += 1000;
+      m.reply(`*🥳 أنت الفائز! 🎉*\n\n*👉🏻 أنت: ${selectedCommand}*\n*👉🏻 البوت: ${astro}*\n*🎁 جائزة +1000 نقطة خبرة*`);
+    } else {
+      global.db.data.users[m.sender].exp -= 300;
+      m.reply(`*☠️ أنت الخاسر! ❌*\n\n*👉🏻 أنت: ${selectedCommand}*\n*👉🏻 البوت: ${astro}*\n*❌ جائزة -300 نقطة خبرة*`);
+    }
+  }
+
+  global.db.data.users[m.sender].wait = new Date * 1;
+};
+
+handler.help = ['ppt'];
+handler.tags = ['games'];
+handler.command = /^(ppt)$/i;
+export default handler;
